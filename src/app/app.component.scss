@@ -1,12 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
 
 $primary: black;
 $secondary: white;
 // $tertiary: #002060;
 $tertiary: #00eef6;
 
+$primary-80: lighten($primary, 20%);
+$primary-60: lighten($primary, 40%);
+$primary-40: lighten($primary, 60%);
+$primary-20: lighten($primary, 80%);
+
+$tertiary-80: lighten($tertiary, 20%);
+$tertiary-60: lighten($tertiary, 40%);
+$tertiary-40: lighten($tertiary, 60%);
+$tertiary-20: lighten($tertiary, 80%);
+
+$font-size-1: 40px;
+$font-size-2: 24px;
+$font-size-3: 16px;
 
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -50,10 +65,10 @@ $tertiary: #00eef6;
     flex-direction: column;
     align-items: center;
     // background-color: $primary;
-    background: rgba($primary, 0.7);
+    background: rgba($primary, 0.4);
     color: $secondary;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: $font-size-3;
     z-index: 100;
 
     transition: all 0.5s;
@@ -157,7 +172,7 @@ $tertiary: #00eef6;
     display: flex;
     padding: 5px;
     width: 200px;
-    height: 30px;
+    height: 50px;
     // background: rgba($tertiary, 1);
     justify-content: center;
     align-items: center;
@@ -187,12 +202,21 @@ $tertiary: #00eef6;
     // border: 1px solid $tertiary;
   }
 
+  .dropdown:hover + .download-options {
+    display: flex;
+  }
+
+  .download-options:hover {
+    display: flex;
+  }
+
   .download-options {
-    margin-top: 10px;
+    display: none;
+    // margin-top: 10px;
     position: absolute;
     // left: -50%;
     // top: 50%;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     background: $primary;
     width: 100%;
@@ -220,18 +244,18 @@ $tertiary: #00eef6;
   }
 
   .content {
-
+    font-family: 'Montserrat', sans-serif;
     // background-image: url("../assets/backgrounds/background1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/backgrounds/background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/backgrounds/background.jpg');
     // filter: blur(8px);
 
     display: flex;
     flex: 1;
     // background-color: #bbbbbb;
     margin: 0px auto 0px;
-    padding-top: 150px; // Header is position:fixed so start the content lower down
+    padding-top: 50px; // Header is position:fixed so start the content lower down
     padding-bottom: 0px; // Make the background image appear behind the footer below
     // max-width: 1200px;
     flex-direction: column;
@@ -281,11 +305,12 @@ $tertiary: #00eef6;
     .card-row {
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
   }
 
   .logo-container {
-    background-color: white;
+    // background-color: white;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -301,7 +326,7 @@ $tertiary: #00eef6;
     .picture {
       // flex: 1;
       background-color: white;
-      width: 120px;
+      width: 100px;
     }
     // transform: translate3d(calc(100vh), 0px, 0px);
     // transition: transform 5000ms linear 0s;
@@ -321,11 +346,19 @@ $tertiary: #00eef6;
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
-    font-size: 1.5em;
     color: $secondary;
 
     .card-top {
-      flex: 3;
+      flex: 2;
+      // width: calc(100% - 6px);
+      width: 100%;
+
+      // margin-left: 7px;
+      // margin-right: 7px;
+      border-bottom: 3px solid $tertiary;
+      // border-top: 3px solid $tertiary;
+      // border-left: 3px solid $tertiary;
+      // border-right: 3px solid $tertiary;
     }
 
     .card-bottom {
@@ -334,19 +367,22 @@ $tertiary: #00eef6;
       flex-direction: column;
       background: rgba($primary, 0.8);
       width: 100%;
+      color: $secondary;
       justify-content: center;
       align-items: center;
 
       .card-bottom-header {
-        font-size: 30px;
+        font-size: $font-size-2;
+        font-weight: 800;
         width: 80%;
         border-radius: 1px;
-        border-bottom: 2px solid $tertiary;
+        border-bottom: 1px solid $secondary;
         margin-bottom: 5px; // space between bottom border and body
         padding-bottom: 12px; // spacing between header and border
       }
 
       .card-bottom-body {
+        font-size: $font-size-3;
         width: 80%;
         margin-bottom: 5px;
       }
@@ -392,6 +428,36 @@ $tertiary: #00eef6;
 
   .card.card.highlight-card span {
     margin-left: 60px;
+  }
+
+  .card-1 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background-size: cover;
+  }
+
+  .card-2 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/udemy-course.png');
+    background-size: cover;
+  }
+
+  .card-3 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background-size: cover;
+  }
+
+  .card-4 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background-size: cover;
+  }
+
+  .card-5 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background-size: cover;
+  }
+
+  .card-6 {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background-size: cover;
   }
 
   svg#rocket {
@@ -616,24 +682,33 @@ $tertiary: #00eef6;
     align-items: center;
     width: 1000px;
 
+    border-top: 3px solid $tertiary;
+    // border-bottom: 3px solid $tertiary;
+
     .profile-text {
       border-radius: 4px;
       display: flex;
       flex-direction: column;
-      background: rgba($primary, 0.4);
+      background: rgba($primary, 0.8);
       // border: 1px solid $secondary;
       padding: 10px;
       width: 1000px;
       height: 200px;
       text-align: center;
       font-weight: 600;
+      justify-content: center;
+      align-items: center;
 
       .profile-header {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 350%;
+        font-size: $font-size-1;
+        border-bottom: 1px solid $secondary;
+        width: 80%;
+        padding-top: 10px;
+        padding-bottom: 15px;
       }
 
       .profile-body {
@@ -641,7 +716,8 @@ $tertiary: #00eef6;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 250%;
+        font-size: $font-size-2;
+        width: 80%;
         line-height: 150%;
       }
     }
@@ -666,6 +742,47 @@ $tertiary: #00eef6;
     background: rgba($primary, 1);
     color: $secondary;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: $font-size-3;
     z-index: 100;
+    border-top: 3px solid $tertiary;
+  }
+
+  .section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    // background: rgba($tertiary, 1);
+    padding: 20px;
+  }
+
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    // background: rgba($primary-60, 1);
+    padding: 20px;
+  }
+
+  .section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    background: rgba($primary-80, 1);
+    padding: 20px;
+  }
+
+  .section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    background: rgba($primary-40, 1);
+    padding: 20px;
   }
