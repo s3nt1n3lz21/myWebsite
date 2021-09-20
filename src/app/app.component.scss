@@ -244,6 +244,11 @@ $font-size-3: 16px;
   }
 
   .content {
+    --x: 0px;
+    --y: 0px;
+    // background-image: url(large-image.jpg);
+    background-position: var(--x) var(--y);
+
     font-family: 'Montserrat', sans-serif;
     // background-image: url("../assets/backgrounds/background1.jpg");
     background-size: cover;

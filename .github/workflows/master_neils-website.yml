@@ -10,12 +10,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  
   build:
     runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
-
+ 
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
@@ -26,6 +27,11 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
+
+      - name: Zip build files up
+        uses: actions/ArchiveFiles@2
+        with:
+          rootFolderOrFile: .
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

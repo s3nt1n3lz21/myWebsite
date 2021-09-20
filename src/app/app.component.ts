@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 export interface Tile {
   color: string;
@@ -12,7 +12,7 @@ export interface Tile {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'myWebsite';
 
   showDownloadOptions = false;
@@ -48,5 +48,14 @@ export class AppComponent {
     } else {
       header.classList.remove('scrolled'); 
     }
+  }
+  
+  ngOnInit() {
+    const el: HTMLElement = document.querySelector(".content");
+
+    el.addEventListener("mousemove", (e) => {
+      el.style.setProperty('--x', -e.offsetX + "px");
+      el.style.setProperty('--y', -e.offsetY + "px");
+    });
   }
 }
