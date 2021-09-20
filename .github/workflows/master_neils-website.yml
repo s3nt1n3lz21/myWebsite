@@ -29,7 +29,7 @@ jobs:
           npm run test --if-present
 
       - name: Zip build files up
-        uses: actions/ArchiveFiles@2
+        uses: actions/archive-files@2
         with:
           rootFolderOrFile: .
       
