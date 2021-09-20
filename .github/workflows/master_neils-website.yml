@@ -28,16 +28,16 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Zip build files up
-        uses: actions/archive-files@2
-        with:
-          rootFolderOrFile: .
+      # - name: Zip build files up
+      #   uses: actions/archive-files@2
+      #   with:
+      #     rootFolderOrFile: .
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
