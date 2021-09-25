@@ -19,9 +19,10 @@ $tertiary-60: lighten($tertiary, 40%);
 $tertiary-40: lighten($tertiary, 60%);
 $tertiary-20: lighten($tertiary, 80%);
 
-$font-size-1: 40px;
-$font-size-2: 24px;
-$font-size-3: 16px;
+$font-size-1: 80px;
+$font-size-2: 40px;
+$font-size-3: 24px;
+$font-size-4: 16px;
 
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -49,6 +50,10 @@ $font-size-3: 16px;
     flex: 1;
   }
 
+  .spacer2 {
+    flex: 2;
+  }
+
   .fixed-spacer {
     height: 100px; // Use a default height of 100px if not using flex
   }
@@ -68,7 +73,7 @@ $font-size-3: 16px;
     background: rgba($primary, 0.4);
     color: $secondary;
     font-weight: 600;
-    font-size: $font-size-3;
+    font-size: $font-size-4;
     z-index: 100;
 
     transition: all 0.5s;
@@ -247,7 +252,8 @@ $font-size-3: 16px;
     --x: 0px;
     --y: 0px;
     // background-image: url(large-image.jpg);
-    background-position: var(--x) var(--y);
+    // background-position: var(--x) var(--y);
+    transform: translate(var(--x) + ', ' + var(--y));
 
     font-family: 'Montserrat', sans-serif;
     // background-image: url("../assets/backgrounds/background1.jpg");
@@ -379,7 +385,7 @@ $font-size-3: 16px;
       align-items: center;
 
       .card-bottom-header {
-        font-size: $font-size-2;
+        font-size: $font-size-3;
         font-weight: 800;
         width: 80%;
         border-radius: 1px;
@@ -389,7 +395,7 @@ $font-size-3: 16px;
       }
 
       .card-bottom-body {
-        font-size: $font-size-3;
+        font-size: $font-size-4;
         width: 80%;
         margin-bottom: 5px;
       }
@@ -696,11 +702,11 @@ $font-size-3: 16px;
       border-radius: 4px;
       display: flex;
       flex-direction: column;
-      background: rgba($primary, 0.8);
+      background: rgba($primary, 0.4);
       // border: 1px solid $secondary;
       padding: 10px;
       width: 1000px;
-      height: 200px;
+      height: 350px;
       text-align: center;
       font-weight: 600;
       justify-content: center;
@@ -712,6 +718,7 @@ $font-size-3: 16px;
         justify-content: center;
         align-items: center;
         font-size: $font-size-1;
+        font-weight: 1000;
         border-bottom: 1px solid $secondary;
         width: 80%;
         padding-top: 10px;
@@ -749,7 +756,7 @@ $font-size-3: 16px;
     background: rgba($primary, 1);
     color: $secondary;
     font-weight: 600;
-    font-size: $font-size-3;
+    font-size: $font-size-4;
     z-index: 100;
     border-top: 3px solid $tertiary;
 
@@ -814,4 +821,70 @@ $font-size-3: 16px;
     min-height: 500px;
     background: rgba($primary-40, 1);
     padding: 20px;
+  }
+
+  .section5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    background: rgba($primary-40, 1);
+
+    .section5-left {
+      flex: 1;
+      height: 500px;
+      background: rgba($primary-60, 1);
+    }
+
+    .section5-right {
+      flex: 1;
+      height: 500px;
+      background: rgba($primary-20, 1);
+    }
+  }
+
+  .section6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    background: rgba($primary-40, 1);
+
+    .section6-left {
+      flex: 1;
+      height: 500px;
+      background: rgba($primary-60, 1);
+    }
+
+    .section6-right {
+      flex: 2;
+      height: 500px;
+      background: rgba($primary-20, 1);
+    }
+  }
+
+  .section7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    background: rgba($primary-40, 1);
+
+    .section7-left {
+      flex: 2;
+      height: 500px;
+      background: rgba($primary-60, 1);
+    }
+
+    .section7-right {
+      flex: 1;
+      height: 500px;
+      background: rgba($primary-20, 1);
+    }
   }
