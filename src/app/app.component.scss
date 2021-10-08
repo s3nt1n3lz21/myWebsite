@@ -815,11 +815,12 @@ $font-family-1: 'Inter', sans-serif;
 
   .section3 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 500px;
-    background: rgba($primary-80, 1);
+    background: rgba($secondary, 1);
     padding: 20px;
   }
 
