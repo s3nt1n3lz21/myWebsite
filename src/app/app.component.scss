@@ -38,9 +38,10 @@
     align-items: stretch;
   }
 
-  // .header {
-  //   flex-shrink: 0;
-  // }
+  .header {
+    flex-shrink: 0;
+    height: 103px;
+  }
 
   // .content {
   //   flex-shrink: 0;
