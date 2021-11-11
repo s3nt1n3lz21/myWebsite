@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
-@import './theme.scss';
+@import '../theme.scss';
 
 :host {
     font-family: $font-family-1;
@@ -240,12 +240,12 @@
     transform: translate(var(--x) + ', ' + var(--y));
 
     font-family: $font-family-1;
-    // background-image: url("../assets/backgrounds/background1.jpg");
+    // background-image: url("../../assets/backgrounds/background1.jpg");
     background-attachment: fixed;
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/backgrounds/background3.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/backgrounds/background3.jpg');
     // filter: blur(8px);
 
     display: flex;
@@ -433,32 +433,32 @@
   }
 
   .card-1 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/baldurs-gate.png');
     background-size: 600px 400px;
   }
 
   .card-2 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/udemy-course.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/udemy-course.png');
     background-size: cover;
   }
 
   .card-3 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/angular-templates-code-coverage.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/angular-templates-code-coverage.png');
     background-size: cover;
   }
 
   .card-4 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/repayme-app.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/repayme-app.png');
     background-size: 350px 600px;
   }
 
   .card-5 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/baldurs-gate.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/baldurs-gate.png');
     background-size: cover;
   }
 
   .card-6 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/card-backgrounds/medium-articles.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/medium-articles.png');
     background-size: cover;
   }
 
@@ -539,18 +539,6 @@
   .circle-link:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
   }
 
   .github-star-badge {
@@ -729,48 +717,6 @@
 
     mat-grid-tile {
       background: lightblue;
-    }
-  }
-
-  .footer {
-    font-family: $font-family-2;
-    // position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // background-color: $primary;
-    background: rgba($primary, 1);
-    color: $secondary;
-    font-weight: 600;
-    font-size: $font-size-4;
-    z-index: 100;
-    border-top: 3px solid $tertiary;
-
-    .footer-top {
-      display: flex;
-      flex: 1;
-      flex-direction: row;
-      width: 100%;
-    }
-  
-    .footer-bottom {
-      display: flex;
-      flex: 1;
-      flex-direction: row;
-      width: 100%;
-    }
-
-    .footer-row-item {
-      display: flex;
-      flex: 1;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
     }
   }
 

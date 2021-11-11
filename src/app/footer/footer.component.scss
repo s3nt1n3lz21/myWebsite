@@ -1,0 +1,43 @@
+@import '../theme.scss';
+
+.footer {
+    font-family: $font-family-2;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: $primary;
+    background: rgba($primary, 1);
+    color: $secondary;
+    font-weight: 600;
+    font-size: $font-size-4;
+    z-index: 100;
+    border-top: 3px solid $tertiary;
+
+    .footer-top {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    .footer-bottom {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .footer-row-item {
+      display: flex;
+      flex: 1;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }

@@ -1,0 +1,23 @@
+$primary: black;
+$secondary: white;
+// $tertiary: #002060;
+$tertiary: #00eef6;
+
+$primary-80: lighten($primary, 20%);
+$primary-60: lighten($primary, 40%);
+$primary-40: lighten($primary, 60%);
+$primary-20: lighten($primary, 80%);
+
+$tertiary-80: lighten($tertiary, 20%);
+$tertiary-60: lighten($tertiary, 40%);
+$tertiary-40: lighten($tertiary, 60%);
+$tertiary-20: lighten($tertiary, 80%);
+
+$font-size-1: 80px;
+$font-size-2: 40px;
+$font-size-3: 24px;
+$font-size-4: 16px;
+
+$font-family-3: 'Open Sans', sans-serif;
+$font-family-2: 'Montserrat', sans-serif;
+$font-family-1: 'Inter', sans-serif;
