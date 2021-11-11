@@ -39,17 +39,6 @@ export class AppComponent implements OnInit {
   max;
   invert;
 
-  @HostListener('window:scroll', ['$event']) // for window scroll events
-  onScroll(event) {
-    // console.log(window.scrollY)
-    const header = document.querySelector('.toolbar');
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled'); 
-    }
-  }
-
   lFollowX = 0;
   lFollowY = 0;
   x = 0;
