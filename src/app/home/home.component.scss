@@ -38,13 +38,14 @@
 
     .profile-text {
       border-radius: 4px;
+      letter-spacing: 1.0em;
       display: flex;
       flex-direction: column;
       background: rgba($primary, 0.4);
       // border: 1px solid $secondary;
       padding: 10px;
       width: 1000px;
-      height: 350px;
+      height: 250px;
       text-align: center;
       // font-weight: 600;
       justify-content: center;
@@ -65,7 +66,7 @@
       }
 
       .profile-body {
-        flex: 2;
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
