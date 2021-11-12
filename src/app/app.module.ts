@@ -14,9 +14,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
 import { SocialComponent } from './social/social.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutResolverService } from './about/about-resolver.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     BlogComponent,
-    AboutComponent,
     SocialComponent,
     FooterComponent
   ],
@@ -40,7 +39,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     // MatGridListModule,
   ],
-  providers: [],
+  providers: [AboutResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
