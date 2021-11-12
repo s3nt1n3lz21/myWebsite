@@ -1,112 +1,11 @@
 @import '../theme.scss';
 
-:host {
-    font-family: $font-family-1;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
-
-  p {
-    margin: 0;
+  :host {
+    width: 100%;
   }
 
   .spacer {
     flex: 1;
-  }
-
-  .spacer2 {
-    flex: 2;
-  }
-
-  .fixed-spacer {
-    height: 100px; // Use a default height of 100px if not using flex
-  }
-
-  .toolbar {
-    font-family: $font-family-2;
-    position: fixed;
-    border-bottom: 3px solid $tertiary;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // background-color: $primary;
-    background: rgba($primary, 0.4);
-    color: $secondary;
-    font-weight: 600;
-    font-size: $font-size-4;
-    z-index: 100;
-
-    transition: all 0.5s;
-
-    .toolbar-row {
-        flex: 1;
-        justify-content: center;
-        width: 100%;
-        display: flex;
-
-        .item-container{
-            justify-content: center;
-            align-items: center;
-        }
-
-        .toolbar-row-item {
-          display: flex;
-          flex: 1;
-          align-self: center;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .toolbar-row-item-dropdown {
-          position: relative;
-          align-self: center;
-        }
-
-        .toolbar-row-link {
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            // border: black;
-            // border-width: 1px;
-            // border-style: solid;
-            margin: 15px;
-            color: $secondary;
-
-            text-decoration: underline solid $secondary;
-            text-underline-offset: 7px;
-            text-decoration-thickness: 2px;
-
-            span {
-                margin: 6px;
-            }
-        }
-
-        .toolbar-row-link:hover {
-            // background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-            // border-color: rgba(27,31,35,.35);
-            // background-position: -.5em;
-            color: $tertiary;
-            text-decoration: underline solid $tertiary;
-            text-decoration-thickness: 2px;
-            // border-color: $tertiary;
-          }
-    }
   }
 
   .toolbar.scrolled {
@@ -308,7 +207,7 @@
     .picture {
       // flex: 1;
       background-color: white;
-      width: 100px;
+      width: 200px;
     }
     // transform: translate3d(calc(100vh), 0px, 0px);
     // transition: transform 5000ms linear 0s;
