@@ -1,5 +1,9 @@
 @import '../theme.scss';
 
+:host {
+  width: 100%;
+}
+
 .section1 {
   display: flex;
   height: 100%;
