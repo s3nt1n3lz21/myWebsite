@@ -17,15 +17,15 @@ import { BlogComponent } from './blog/blog.component';
 import { SocialComponent } from './social/social.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutResolverService } from './about/about-resolver.service';
+import { PortfolioResolverService } from './portfolio/portfolio-resolver.service';
+import { BlogResolverService } from './blog/blog-resolver.service';
+import { SocialResolverService } from './social/social-resolver.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent,
     HomeComponent,
     HeaderComponent,
-    BlogComponent,
-    SocialComponent,
     FooterComponent
   ],
   imports: [
@@ -39,7 +39,12 @@ import { AboutResolverService } from './about/about-resolver.service';
     BrowserAnimationsModule,
     // MatGridListModule,
   ],
-  providers: [AboutResolverService],
+  providers: [
+    AboutResolverService,
+    PortfolioResolverService,
+    BlogResolverService,
+    SocialResolverService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
