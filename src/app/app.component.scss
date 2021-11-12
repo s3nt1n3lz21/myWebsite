@@ -46,6 +46,9 @@
   .content {
     flex-shrink: 0;
     min-height: calc(100vh - 206px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer {

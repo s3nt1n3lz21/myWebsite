@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 export interface Tile {
   color: string;
@@ -14,6 +15,10 @@ export interface Tile {
 })
 export class AppComponent implements OnInit {
   title = 'myWebsite';
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.['animation'];
+  }
 
   showDownloadOptions = false;
   downloadCVOptions = ['PDF','DOC'];
