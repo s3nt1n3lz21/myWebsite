@@ -356,23 +356,25 @@
       align-items: center;
 
       .card-bottom-header {
+        letter-spacing: 0.1em;
         text-align: center;
         font-family: $font-family-2;
-        font-size: $font-size-3;
+        font-size: $font-size-2;
         font-weight: 800;
         width: 80%;
         border-radius: 1px;
         border-bottom: 1px solid $secondary;
-        margin-bottom: 5px; // space between bottom border and body
-        padding-bottom: 12px; // spacing between header and border
+        margin-bottom: 10px; // space between bottom border and body
+        padding-bottom: 22px; // spacing between header and border
       }
 
       .card-bottom-body {
         text-align: center;
         font-family: $font-family-2;
-        font-size: $font-size-4;
+        font-size: $font-size-3;
         width: 80%;
         margin-bottom: 5px;
+        line-height: 1.5em;
       }
     }
   }
