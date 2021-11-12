@@ -11,7 +11,7 @@
 
 
   .main {
-    min-height: 100%;
+    min-height: 100vh;
     --x: 0px;
     --y: 0px;
     // background-image: url(large-image.jpg);
@@ -31,7 +31,7 @@
     flex: 1;
     // background-color: #bbbbbb;
     margin: 0px auto 0px;
-    padding-top: 50px; // Header is position:fixed so start the content lower down
+    // padding-top: 50px; // Header is position:fixed so start the content lower down
     padding-bottom: 0px; // Make the background image appear behind the footer below
     // max-width: 1200px;
     flex-direction: column;
@@ -40,17 +40,19 @@
 
   .header {
     flex-shrink: 0;
-    height: 103px;
+    min-height: 103px;
   }
 
-  // .content {
-  //   flex-shrink: 0;
-  // }
+  .content {
+    flex-shrink: 0;
+    min-height: calc(100vh - 206px);
+  }
 
   .footer {
     // justify-content: flex-end;
     // flex-shrink: 0;
-    margin-top: auto;
+    // margin-top: auto;
+    min-height: 103px;
     width: 100%;
   }
  
