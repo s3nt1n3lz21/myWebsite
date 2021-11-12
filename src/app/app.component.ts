@@ -18,7 +18,7 @@ export interface Tile {
 export class AppComponent implements OnInit {
   title = 'myWebsite';
 
-  getRouterOutletState(outlet: RouterOutlet) {
+  prepareRoute(outlet: RouterOutlet) {
     return outlet.isActivated ? outlet.activatedRoute : '';
   }
 
@@ -56,14 +56,14 @@ export class AppComponent implements OnInit {
     const el: HTMLElement = document.querySelector(".content");
 
     el.addEventListener("mousemove", (e) => {
-      console.log('e.offsetX: ', e.offsetX);
-      console.log('e.offsetY: ', e.offsetY);
+      // console.log('e.offsetX: ', e.offsetX);
+      // console.log('e.offsetY: ', e.offsetY);
 
       let lMouseX = Math.max(-100, Math.min(100, window.outerWidth / 2 - e.clientX));
       let lMouseY = Math.max(-100, Math.min(100, window.outerHeight / 2 - e.clientY));
 
-      console.log('lMouseX: ', lMouseX);
-      console.log('lMouseY: ', lMouseY);
+      // console.log('lMouseX: ', lMouseX);
+      // console.log('lMouseY: ', lMouseY);
 
       let lFollowX = (100 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
       let lFollowY = (100 * lMouseY) / 100;

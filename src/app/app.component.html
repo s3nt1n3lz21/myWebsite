@@ -1,4 +1,4 @@
-<div class="main" role="main" [@fadeAnimation]="getRouterOutletState(outlet)">
+<div class="main" role="main" [@fadeAnimation]="prepareRoute(outlet)">
   <app-header class="header"></app-header>
   <div class="content">
     <router-outlet #outlet="outlet"></router-outlet>
