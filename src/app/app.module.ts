@@ -20,6 +20,8 @@ import { AboutResolverService } from './about/about-resolver.service';
 import { PortfolioResolverService } from './portfolio/portfolio-resolver.service';
 import { BlogResolverService } from './blog/blog-resolver.service';
 import { SocialResolverService } from './social/social-resolver.service';
+import { ServicesComponent } from './services/services.component';
+import { ServicesResolverService } from './services/services-resolver.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { SocialResolverService } from './social/social-resolver.service';
     AboutResolverService,
     PortfolioResolverService,
     BlogResolverService,
-    SocialResolverService
+    SocialResolverService,
+    ServicesResolverService
   ],
   bootstrap: [AppComponent]
 })
