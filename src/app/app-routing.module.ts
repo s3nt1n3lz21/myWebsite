@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlogComponent } from './blog/blog.component';
 import { HomeComponent } from './home/home.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { SocialComponent } from './social/social.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'portfolio',
-    component: PortfolioComponent,
+    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule) 
   },
   {
     path: 'about',
@@ -22,11 +19,11 @@ export const routes: Routes = [
   },
   {
     path: 'blogs',
-    component: BlogComponent,
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) 
   },
   {
     path: 'social',
-    component: SocialComponent,
+    loadChildren: () => import('./social/social.module').then(m => m.SocialModule) 
   },
 ];
 
