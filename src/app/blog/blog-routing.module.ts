@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogResolverService } from './blog-resolver.service';
-import { BlogComponent } from './Blog.component';
+import { BlogComponent } from './blog.component';
 
 
 const routes: Routes = [

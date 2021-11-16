@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SocialResolverService } from './social-resolver.service';
-import { SocialComponent } from './Social.component';
+import { SocialComponent } from './social.component';
 
 
 const routes: Routes = [

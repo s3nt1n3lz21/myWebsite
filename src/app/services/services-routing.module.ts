@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ServicesResolverService } from './services-resolver.service';
-import { ServicesComponent } from './Services.component';
+import { ServicesComponent } from './services.component';
 
 
 const routes: Routes = [

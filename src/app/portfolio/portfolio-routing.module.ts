@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PortfolioResolverService } from './portfolio-resolver.service';
-import { PortfolioComponent } from './Portfolio.component';
+import { PortfolioComponent } from './portfolio.component';
 
 
 const routes: Routes = [
