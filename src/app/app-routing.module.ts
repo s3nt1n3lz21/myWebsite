@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule) 
   },
   {
+    path: 'services',
+    loadChildren: () => import('./services/services.module').then(m => m.ServicesModule) 
+  },
+  {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule) 
   },
