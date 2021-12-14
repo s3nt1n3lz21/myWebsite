@@ -16,40 +16,10 @@
     margin: 0 16px;
   }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
-
-  .page {
-    flex: 1;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-
-  // .content:before {
-  //   filter: blur(8px);
-  // }
-
   .dropdown {
     // border: 1px solid $secondary;
     display: flex;
-    padding: 5px;
+    padding: $padding-0-5;
     width: 200px;
     height: 50px;
     // background: rgba($tertiary, 1);
@@ -220,7 +190,6 @@
     height: 800px;
     flex: 1;
     margin: 20px;
-    // padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -526,26 +495,6 @@
     }
   }
 
-  .section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    // background: rgba($tertiary, 1);
-    padding: 20px;
-  }
-
-  .section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    // background: rgba($primary-60, 1);
-    padding: 20px;
-  }
-
   .section3 {
     display: flex;
     flex-direction: column;
@@ -554,81 +503,5 @@
     width: 100%;
     min-height: 500px;
     background: rgba($secondary, 1);
-    padding: 20px;
-  }
-
-  .section4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    background: rgba($primary-40, 1);
-    padding: 20px;
-  }
-
-  .section5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    background: rgba($primary-40, 1);
-
-    .section5-left {
-      flex: 1;
-      height: 500px;
-      background: rgba($primary-60, 1);
-    }
-
-    .section5-right {
-      flex: 1;
-      height: 500px;
-      background: rgba($primary-20, 1);
-    }
-  }
-
-  .section6 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    background: rgba($primary-40, 1);
-
-    .section6-left {
-      flex: 1;
-      height: 500px;
-      background: rgba($primary-60, 1);
-    }
-
-    .section6-right {
-      flex: 2;
-      height: 500px;
-      background: rgba($primary-20, 1);
-    }
-  }
-
-  .section7 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    background: rgba($primary-40, 1);
-
-    .section7-left {
-      flex: 2;
-      height: 500px;
-      background: rgba($primary-60, 1);
-    }
-
-    .section7-right {
-      flex: 1;
-      height: 500px;
-      background: rgba($primary-20, 1);
-    }
+    padding: $padding-0-5;
   }
