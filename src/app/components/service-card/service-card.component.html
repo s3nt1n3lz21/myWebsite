@@ -1,0 +1,10 @@
+<a class="card" target="_blank" rel="noopener">
+    <div class="card__header">
+        {{ service.name }}
+    </div>
+    <div class="card__body">
+        <ul class="a">
+            <li *ngFor="let item of service.items">{{ item }}</li>
+        </ul>
+    </div>
+</a>

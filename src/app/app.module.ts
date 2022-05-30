@@ -17,13 +17,15 @@ import { SocialResolverService } from './social/social-resolver.service';
 import { PortfolioResolverService } from './portfolio/portfolio-resolver.service';
 import { BlogResolverService } from './blog/blog-resolver.service';
 import { ServicesResolverService } from './services/services-resolver.service';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ServiceCardComponent
   ],
   imports: [
     CommonModule,
