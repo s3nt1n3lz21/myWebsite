@@ -25,10 +25,10 @@ export const routes: Routes = [
     path: 'blogs',
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) 
   },
-  {
-    path: 'social',
-    loadChildren: () => import('./social/social.module').then(m => m.SocialModule) 
-  },
+  // {
+  //   path: 'social',
+  //   loadChildren: () => import('./social/social.module').then(m => m.SocialModule) 
+  // },
 ];
 
 @NgModule({
