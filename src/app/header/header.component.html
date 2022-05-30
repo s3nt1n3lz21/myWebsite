@@ -1,10 +1,4 @@
 <div (scroll)="onScroll($event)" class="toolbar" role="banner">
-    <!-- <div class="toolbar-row">
-  
-      <div class="item-container">
-  
-      </div>
-    </div> -->
     <div class="toolbar-row">
       <div class="spacer"></div>
       <div class="title" (click)="router.navigate(['home'])">
@@ -46,44 +40,17 @@
           GitHub
         </a>
       </div>
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://stackoverflow.com/users/5136154/s3nt1n3lz">
-          Stack Overflow
-        </a>
-      </div>
-      <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://www.npmjs.com/~s3nt1n3lz24">
-          NPM
-        </a>
-      </div> -->
-      <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['social'])">
-          Social
-        </a>
-      </div>
       <div class="spacer2"></div>
       <div class="toolbar-row-item-dropdown">
-        <!-- <div class="dropdown" (click)="showDownloadOptions = !showDownloadOptions"> -->
         <div class="dropdown">
           Download CV
-          <!-- [ngClass]="{'icon-rotated': showDownloadOptions}" -->
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
         </div>
         <div class="download-options">
           <a href="../assets/files/MyCV.pdf" download class="download-option first">PDF</a>
           <a href="../assets/files/MyCV.docx" download class="download-option">DOC</a>
         </div>
-        <!-- <ng-select class="dropdown" ngDefaultControl [items]="downloadCVOptions" [searchable]="false" [clearable]="false"
-          [ngModel]="downloadCVOption" (ngModelChange)="downloadCV($event)"
-        > -->
-          <!-- <ng-template class="dropdown-text" ng-label-tmp let-item="item">
-            <b>Download CV</b>
-          </ng-template> -->
-        <!-- </ng-select> -->
       </div>
-
       <div class="spacer"></div>
-
     </div>
-  
   </div>
