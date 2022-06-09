@@ -48,7 +48,7 @@
     background: rgba($primary, 0.4);
     color: $secondary;
     font-weight: 600;
-    font-size: $font-size-4;
+    font-size: $font-size-1-5;
     z-index: 100;
 
     transition: all 0.5s;
@@ -222,16 +222,14 @@
   .ng-dropdown-panel {
     height: 100px;
   }
-
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.2em;
-    font-size: 2em;
+    font-size: $font-size-1-5;
     color: $secondary;
-}
-
+  }
   a,
   a:visited,
   a:hover {
