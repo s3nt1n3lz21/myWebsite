@@ -25,6 +25,10 @@ export const routes: Routes = [
     path: 'blogs',
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) 
   },
+  {
+    path: 'certificates',
+    loadChildren: () => import('./certificates/certificates.module').then(m => m.CertificatesModule) 
+  },
   // {
   //   path: 'social',
   //   loadChildren: () => import('./social/social.module').then(m => m.SocialModule) 
