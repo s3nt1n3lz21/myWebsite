@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,19 +11,23 @@ export const routes: Routes = [
   },
   {
     path: 'portfolio',
-    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule) 
+    loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule) 
   },
   {
     path: 'services',
-    loadChildren: () => import('./services/services.module').then(m => m.ServicesModule) 
+    loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule) 
   },
   {
     path: 'about',
-    loadChildren: () => import('./about/about.module').then(m => m.AboutModule) 
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) 
   },
   {
     path: 'blogs',
-    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) 
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) 
+  },
+  {
+    path: 'certificates',
+    loadChildren: () => import('./pages/certificates/certificates.module').then(m => m.CertificatesModule) 
   },
   // {
   //   path: 'social',
