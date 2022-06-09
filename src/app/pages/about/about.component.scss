@@ -1,4 +1,4 @@
-@import '../theme.scss';
+@import '../../theme.scss';
 
   :host {
     width: 100%;
@@ -130,12 +130,12 @@
     transform: translate(var(--x) + ', ' + var(--y));
 
     font-family: $font-family-1;
-    // background-image: url("../../assets/backgrounds/background1.jpg");
+    // background-image: url("../../../assets/backgrounds/background1.jpg");
     background-attachment: fixed;
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/backgrounds/background3.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../../assets/backgrounds/background3.jpg');
     // filter: blur(8px);
 
     display: flex;
@@ -312,36 +312,6 @@
 
   .card.card.highlight-card span {
     margin-left: 60px;
-  }
-
-  .card-1 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/baldurs-gate.png');
-    background-size: 600px 400px;
-  }
-
-  .card-2 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/udemy-course.png');
-    background-size: cover;
-  }
-
-  .card-3 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/angular-templates-code-coverage.png');
-    background-size: cover;
-  }
-
-  .card-4 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/repayme-app.png');
-    background-size: 350px 600px;
-  }
-
-  .card-5 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/baldurs-gate.png');
-    background-size: cover;
-  }
-
-  .card-6 {
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../assets/card-backgrounds/medium-articles.png');
-    background-size: cover;
   }
 
   svg#rocket {

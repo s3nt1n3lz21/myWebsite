@@ -9,14 +9,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AboutResolverService } from './about/about-resolver.service';
-import { SocialResolverService } from './social/social-resolver.service';
-import { PortfolioResolverService } from './portfolio/portfolio-resolver.service';
-import { BlogResolverService } from './blog/blog-resolver.service';
-import { ServicesResolverService } from './services/services-resolver.service';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { AboutResolverService } from './pages/about/about-resolver.service';
+import { SocialResolverService } from './pages/social/social-resolver.service';
+import { PortfolioResolverService } from './pages/portfolio/portfolio-resolver.service';
+import { BlogResolverService } from './pages/blog/blog-resolver.service';
+import { ServicesResolverService } from './pages/services/services-resolver.service';
 import { CertificateComponent } from './components/certificate/certificate.component';
 
 @NgModule({
