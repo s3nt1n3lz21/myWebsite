@@ -1,55 +1,35 @@
 @import '../../theme.scss';
 
-:host {
-  width: 100%;
-  min-height: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .profile-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 150px;
     width: 100%;
   }
 
   .profile {
     height: 500px;
-    // background: rgb(105, 103, 103, 0.5);
-    // background-position: 30% bottom;
-    // width: 100%;
-
-    /* Add the blur effect */
-    // filter: blur(8px);
-    // -webkit-filter: blur(8px);
     color: $secondary;
-    
     display: flex;
     flex: 1;
     justify-content: center; 
     align-items: center;
-    width: 1500px;
-
-    border-top: 3px solid $tertiary;
-    // border-bottom: 3px solid $tertiary;
+    width: 100%;
+    max-width: 1500px;
+    // border-top: 3px solid $tertiary;
 
     .profile-text {
       border-radius: 4px;
       letter-spacing: 1.0em;
       display: flex;
       flex-direction: column;
-      background: rgba($primary, 0.4);
-      // border: 1px solid $secondary;
+      // background: rgba($primary, 0.4);
       padding: 10px;
       width: 1500px;
       height: 500px;
       text-align: center;
-      // font-weight: 600;
       justify-content: center;
       align-items: center;
 

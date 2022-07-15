@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
@@ -8,26 +8,32 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    data: { animation: 'home' }
   },
   {
     path: 'portfolio',
-    loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule) 
+    loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule), 
+    data: { animation: 'portfolio' }
   },
   {
     path: 'services',
-    loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule) 
+    loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule),
+    data: { animation: 'services' }
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) 
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
+    data: { animation: 'about' }
   },
   {
     path: 'blogs',
-    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) 
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule),
+    data: { animation: 'blogs' } 
   },
   {
     path: 'certificates',
-    loadChildren: () => import('./pages/certificates/certificates.module').then(m => m.CertificatesModule) 
+    loadChildren: () => import('./pages/certificates/certificates.module').then(m => m.CertificatesModule),
+    data: { animation: 'certificates' } 
   },
   // {
   //   path: 'social',
@@ -36,7 +42,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

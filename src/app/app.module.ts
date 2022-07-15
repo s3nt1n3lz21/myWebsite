@@ -18,14 +18,21 @@ import { PortfolioResolverService } from './pages/portfolio/portfolio-resolver.s
 import { BlogResolverService } from './pages/blog/blog-resolver.service';
 import { ServicesResolverService } from './pages/services/services-resolver.service';
 import { CertificateComponent } from './components/certificate/certificate.component';
+import { CardComponent } from './components/card/card.component';
+import { ServiceComponent } from './components/service/service.component';
 
 @NgModule({
   declarations: [
+    // Layout
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CertificateComponent
+
+    // Pages
+    HomeComponent,
+
+
+    // Components
   ],
   imports: [
     CommonModule,
@@ -36,7 +43,6 @@ import { CertificateComponent } from './components/certificate/certificate.compo
     MatSliderModule,
     MatGridListModule,
     BrowserAnimationsModule,
-    // MatGridListModule,
   ],
   providers: [
     AboutResolverService,

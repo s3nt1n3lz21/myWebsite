@@ -1,0 +1,19 @@
+$color1: #00072D;
+$color2: #001C55;
+$color3: #0A2472;
+$color4: #0E6BA8;
+$color5: #A6E1FA;
+
+$primary: $color1;
+$tertiary: $color2;
+$secondary: $color3;
+
+$primary-80: lighten($primary, 20%);
+$primary-60: lighten($primary, 40%);
+$primary-40: lighten($primary, 60%);
+$primary-20: lighten($primary, 80%);
+
+$tertiary-80: lighten($tertiary, 20%);
+$tertiary-60: lighten($tertiary, 40%);
+$tertiary-40: lighten($tertiary, 60%);
+$tertiary-20: lighten($tertiary, 80%);

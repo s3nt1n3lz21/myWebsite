@@ -70,10 +70,14 @@
             "browserTarget": "myWebsite:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "myWebsite:build:development"
+            },
             "production": {
               "browserTarget": "myWebsite:build:production"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

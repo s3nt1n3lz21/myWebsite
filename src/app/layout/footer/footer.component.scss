@@ -12,12 +12,12 @@
     flex-direction: column;
     align-items: center;
     // background-color: $primary;
-    background: rgba($primary, 1);
-    color: $secondary;
+    // background: rgba($color2, 1);
+    color: $color1;
     font-weight: 600;
     font-size: $font-size-1;
     z-index: 100;
-    border-top: 3px solid $tertiary;
+    // border-top: 3px solid $tertiary;
 
     .footer-top {
       display: flex;

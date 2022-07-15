@@ -1,0 +1,10 @@
+<app-card class="service">
+    <div class="service__title">
+        {{ service.title }}
+    </div>
+    <div class="service__body">
+        <ul>
+            <li *ngFor="let item of service.items">{{ item }}</li>
+        </ul>
+    </div>
+</app-card>

@@ -1,6 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { fadeAnimation } from './animations/fade.animation';
+import { Component, OnInit } from '@angular/core';
+import { ChildrenOutletContexts } from '@angular/router';
+import { slideInAnimation } from './animations/slideIn.animation';
 
 export interface Tile {
   color: string;
@@ -13,13 +13,15 @@ export interface Tile {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [fadeAnimation]
+  animations: [slideInAnimation]
 })
 export class AppComponent implements OnInit {
   title = 'myWebsite';
 
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet.isActivated ? outlet.activatedRoute : '';
+  constructor(private contexts: ChildrenOutletContexts) {}
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 
   showDownloadOptions = false;

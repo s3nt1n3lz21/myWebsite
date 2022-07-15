@@ -14,26 +14,22 @@
     min-height: 100vh;
     --x: 0px;
     --y: 0px;
-    // background-image: url(large-image.jpg);
-    // background-position: var(--x) var(--y);
     transform: translate(var(--x) + ', ' + var(--y));
 
     font-family: $font-family-1;
-    // background-image: url("../assets/backgrounds/background1.jpg");
     background-attachment: fixed;
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/backgrounds/background3.jpg');
-    // filter: blur(8px);
+    // Old Image
+    // background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../assets/backgrounds/background3.jpg');
+    background-color: $color5;
 
     display: flex;
     flex: 1;
-    // background-color: #bbbbbb;
     margin: 0px auto 0px;
     // padding-top: 50px; // Header is position:fixed so start the content lower down
     padding-bottom: 0px; // Make the background image appear behind the footer below
-    // max-width: 1200px;
     flex-direction: column;
     align-items: stretch;
   }
@@ -44,17 +40,10 @@
   }
 
   .content {
-    flex-shrink: 0;
     min-height: calc(100vh - 206px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .footer {
-    // justify-content: flex-end;
-    // flex-shrink: 0;
-    // margin-top: auto;
     min-height: 103px;
     width: 100%;
   }
