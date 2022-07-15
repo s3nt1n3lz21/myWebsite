@@ -20,6 +20,8 @@ import { ServicesResolverService } from './pages/services/services-resolver.serv
 import { CertificateComponent } from './components/certificate/certificate.component';
 import { CardComponent } from './components/card/card.component';
 import { ServiceComponent } from './components/service/service.component';
+import { CVComponent } from './pages/cv/cv.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
