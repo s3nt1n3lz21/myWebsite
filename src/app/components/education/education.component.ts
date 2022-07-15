@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IEducation, emptyIEducation } from 'src/app/model/IEducation';
 
 @Component({
   selector: 'app-education',
@@ -12,4 +13,8 @@ export class EducationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public education: IEducation = emptyIEducation();
+  @Input() set educationInput(education: IEducation) {
+    this.education = education;
+  }
 }

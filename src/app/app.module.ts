@@ -30,10 +30,6 @@ import { AwardComponent } from './components/award/award.component';
     // Pages
     HomeComponent,
 
-    EducationComponent,
-
-    AwardComponent,
-
 
     // Components
   ],

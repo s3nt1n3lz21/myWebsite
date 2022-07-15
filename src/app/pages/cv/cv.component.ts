@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IAward } from 'src/app/model/IAward';
+import { IEducation } from 'src/app/model/IEducation';
 import { IWorkExperience } from 'src/app/model/IWorkExperience';
 
 @Component({
@@ -100,9 +102,69 @@ export class CVComponent implements OnInit {
     }
   ]
 
+  educations: IEducation[] = [
+    {
+      type: 'MPhys Theoretical Physics | 1st Class',
+      institution: 'The University Of Sheffield',
+      startDate: '2014',
+      endDate: '2018',
+      location: 'Sheffield, UK',
+      description: 'Thesis Title - Calculation Of Tight Bell Inequalities Through Robustness'
+    },
+    {
+      type: 'A Levels',
+      institution: 'Greenhead College',
+      startDate: '2012',
+      endDate: '2014',
+      location: 'Huddersfield, UK',
+      description: 'Physics: A, Maths: A, Chemistry: A, General Studies: D, AS Further Maths: A, AS Computing: A'
+    },
+    {
+      type: 'GCSEs',
+      institution: 'Holmfirth High School',
+      startDate: '2007',
+      endDate: '2012',
+      location: 'Holmfirth, UK',
+      description: 'Physics: A, Maths: A, FSMQ Additional Maths: A, Chemistry: A, Biology: A, Statistics: B, ICT Distinction, English Language: B, English Literature: B, Geology: A, Spanish: A, Religious Studies: A'
+    }
+  ]
+
   certificates = [
     'https://udemy-certificate.s3.amazonaws.com/image/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086.jpg',
     'https://udemy-certificate.s3.amazonaws.com/image/UC-48f5a81f-7c33-4c19-81ed-7535af566712.jpg'
+  ]
+
+  awards: IAward[] = [
+    {
+      title: 'Tim Richardson Memorial Prize',
+      date: '2018',
+      money: '£150',
+      description: 'Demonstration of determination and resilience in order to fulfil academic potential.'
+    },
+    {
+      title: 'SURE Scholarship ',
+      date: '2017',
+      money: '£1080',
+      description: 'Awarded one of a limited number of funded research scholarships to complete a research project in Physics over summer.'
+    },
+    {
+      title: 'Ifor Austin Prize',
+      date: '2016',
+      money: '£80',
+      description: 'The best performance by a physics student in their second year.'
+    },
+    {
+      title: 'Ede And Ravenscroft Prize',
+      date: '2015',
+      money: '£71.42',
+      description: 'One of seven of the best overall performances by a student in the faculty of science in their first year.'
+    },
+    {
+      title: 'Fiddes Prize',
+      date: '2015',
+      money: '£50',
+      description: 'The best performance by a physics student in their first year.'
+    }
   ]
 
   ngOnInit(): void {
