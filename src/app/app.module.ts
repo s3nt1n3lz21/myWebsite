@@ -17,11 +17,8 @@ import { SocialResolverService } from './pages/social/social-resolver.service';
 import { PortfolioResolverService } from './pages/portfolio/portfolio-resolver.service';
 import { BlogResolverService } from './pages/blog/blog-resolver.service';
 import { ServicesResolverService } from './pages/services/services-resolver.service';
-import { CertificateComponent } from './components/certificate/certificate.component';
-import { CardComponent } from './components/card/card.component';
-import { ServiceComponent } from './components/service/service.component';
-import { CVComponent } from './pages/cv/cv.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { AwardComponent } from './components/award/award.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +29,10 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 
     // Pages
     HomeComponent,
+
+    EducationComponent,
+
+    AwardComponent,
 
 
     // Components

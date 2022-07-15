@@ -1,15 +1,22 @@
-<h1>Summary</h1>
-<p>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</p>
-<ul>
-    <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
-    <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
-    <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
-    <li>Building responsive mobile first and printable designs using BEM methodology.</li>
-    <li>Creating reactive forms and handling user inputs with Angular Material.</li>
-    <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
-</ul>
-<h1>Skills</h1>
-<h1>Work Experience</h1>
-<app-work-experience [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
+<div class="cv">
+    <h1>Summary</h1>
+    <p>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</p>
+    <ul>
+        <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
+        <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
+        <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
+        <li>Building responsive mobile first and printable designs using BEM methodology.</li>
+        <li>Creating reactive forms and handling user inputs with Angular Material.</li>
+        <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
+    </ul>
+    <h1>Skills</h1>
+    <h1>Work Experience</h1>
+    <app-work-experience [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
+    <h1>Education</h1>
+    <h1>Awards</h1>
+    <app-certificate [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+</div>
+
+
 
 
