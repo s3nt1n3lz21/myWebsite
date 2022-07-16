@@ -1,7 +1,9 @@
-<h2>{{ workExperience.jobTitle }}</h2>
-<h2>{{ workExperience.agency }} - {{ workExperience.client }}</h2>
-<h3>{{ workExperience.startDate }} - {{ workExperience.endDate }}</h3>
-<h3>{{ workExperience.location }}</h3>
-<ul>
-    <li *ngFor="let item of workExperience.description">{{ item }}</li>
-</ul>
+<app-card>
+    <h2>{{ workExperience.jobTitle }}</h2>
+    <h2>{{ workExperience.agency }} - {{ workExperience.client }}</h2>
+    <h3>{{ workExperience.startDate }} - {{ workExperience.endDate }}</h3>
+    <h3>{{ workExperience.location }}</h3>
+    <ul>
+        <li *ngFor="let item of workExperience.description">{{ item }}</li>
+    </ul>
+</app-card>

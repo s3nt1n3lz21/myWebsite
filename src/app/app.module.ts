@@ -19,6 +19,8 @@ import { BlogResolverService } from './pages/blog/blog-resolver.service';
 import { ServicesResolverService } from './pages/services/services-resolver.service';
 import { EducationComponent } from './components/education/education.component';
 import { AwardComponent } from './components/award/award.component';
+import { CardComponent } from './components/card/card.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { AwardComponent } from './components/award/award.component';
     // Components
   ],
   imports: [
+    SharedModule,
     CommonModule,
     BrowserModule,
     AppRoutingModule,

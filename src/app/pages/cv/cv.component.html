@@ -1,25 +1,43 @@
 <div class="cv">
-    <h1>Summary</h1>
-    <p>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</p>
-    <ul>
-        <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
-        <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
-        <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
-        <li>Building responsive mobile first and printable designs using BEM methodology.</li>
-        <li>Creating reactive forms and handling user inputs with Angular Material.</li>
-        <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
-    </ul>
-    <h1>Skills</h1>
-    <h1>Work Experience</h1>
-    <app-work-experience [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
-    <h1>Education</h1>
-    <app-education [educationInput]="education" *ngFor="let education of educations"></app-education>
-    <h1>Awards</h1>
-    <app-award [awardInput]="award" *ngFor="let award of awards"></app-award>
-    <h1>Certificates</h1>
-    <app-certificate [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+    <div class="block1">
+        <h1 class="reveal">Summary</h1>
+        <h3>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h3>
+        <ul>
+            <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
+            <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
+            <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
+            <li>Building responsive mobile first and printable designs using BEM methodology.</li>
+            <li>Creating reactive forms and handling user inputs with Angular Material.</li>
+            <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
+        </ul>
+    </div>
+
+    <div class="block2">
+        <h1 class="reveal">Skills</h1>
+    </div>
+
+    <div class="block3">
+        <h1 class="reveal">Work Experience</h1>
+        <app-work-experience class="reveal" [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
+    </div>
+
+    <div class="block4">
+        <h1 class="reveal">Education</h1>
+        <app-education class="reveal" [educationInput]="education" *ngFor="let education of educations"></app-education>
+    </div>
+
+    <div class="block5">
+        <h1 class="reveal">Awards</h1>
+        <app-award class="reveal" [awardInput]="award" *ngFor="let award of awards"></app-award>
+    </div>
+
+    <div class="block5">
+        <h1 class="reveal">Certificates</h1>
+        <app-certificate class="reveal" [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+    </div>
 </div>
 
+<!-- Animate text moving in -->
 
 
 

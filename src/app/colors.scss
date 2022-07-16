@@ -4,6 +4,18 @@ $color3: #0A2472;
 $color4: #0E6BA8;
 $color5: #A6E1FA;
 
+$color1: #2274A5;
+$color2: #F75C03;
+$color3: #F1C40F;
+$color4: #D90368;
+$color5: #00CC66;
+
+$color1: #3B28CC;
+$color2: #2667FF;
+$color3: #3F8EFC;
+$color4: #87BFFF;
+$color5: #ADD7F6;
+
 $primary: $color1;
 $tertiary: $color2;
 $secondary: $color3;
@@ -17,3 +29,29 @@ $tertiary-80: lighten($tertiary, 20%);
 $tertiary-60: lighten($tertiary, 40%);
 $tertiary-40: lighten($tertiary, 60%);
 $tertiary-20: lighten($tertiary, 80%);
+
+:root {
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    h4 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    li {
+        color: white;
+    }
+}
