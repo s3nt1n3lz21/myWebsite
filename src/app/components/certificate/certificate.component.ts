@@ -13,5 +13,8 @@ export class CertificateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() certificate: ICertificate = emptyCertificate();
+  public certificate: string = '';
+  @Input() set certificateInput(certificate: '') {
+    this.certificate = certificate;
+  }
 }

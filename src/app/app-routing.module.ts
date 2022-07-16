@@ -35,6 +35,11 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/certificates/certificates.module').then(m => m.CertificatesModule),
     data: { animation: 'certificates' } 
   },
+  {
+    path: 'cv',
+    loadChildren: () => import('./pages/cv/cv.module').then(m => m.CVModule),
+    data: { animation: 'cv' } 
+  },
   // {
   //   path: 'social',
   //   loadChildren: () => import('./social/social.module').then(m => m.SocialModule) 

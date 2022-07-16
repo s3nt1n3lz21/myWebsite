@@ -11,21 +11,19 @@
 
   .profile {
     height: 500px;
-    color: $secondary;
+    color: white;
     display: flex;
     flex: 1;
     justify-content: center; 
     align-items: center;
     width: 100%;
     max-width: 1500px;
-    // border-top: 3px solid $tertiary;
 
     .profile-text {
       border-radius: 4px;
       letter-spacing: 1.0em;
       display: flex;
       flex-direction: column;
-      // background: rgba($primary, 0.4);
       padding: 10px;
       width: 1500px;
       height: 500px;
@@ -41,7 +39,7 @@
         font-family: $font-family-1;
         font-size: $font-size-4;
         font-weight: 600;
-        border-bottom: 1px solid $secondary;
+        border-bottom: 1px solid white;
         width: 80%;
         padding-top: 10px;
         padding-bottom: 15px;

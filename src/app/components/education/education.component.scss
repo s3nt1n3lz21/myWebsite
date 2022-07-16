@@ -1,0 +1,35 @@
+@import '../../theme.scss';
+
+.education {
+    background-color: $color1;
+    border-radius: 4px;
+
+    &__grid {
+        display: grid;
+        grid-template-areas: 
+        "date type"
+        "location institution"
+        ". description";
+        grid-template-columns: 1fr 5fr;
+    }
+
+    &__type {
+        grid-area: type;
+    }
+
+    &__institution {
+        grid-area: institution;
+    }
+
+    &__date {
+        grid-area: date;
+    }
+
+    &__location {
+        grid-area: location;
+    }
+
+    &__description {
+        grid-area: description;
+    }
+}

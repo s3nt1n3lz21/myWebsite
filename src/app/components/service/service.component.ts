@@ -16,7 +16,6 @@ export class ServiceComponent implements OnInit {
 
   public service: IService = emptyIService()
   @Input() set serviceInput(service: IService) {
-    console.log('serviceInput: ', service);
     this.service = service;
   }
 }

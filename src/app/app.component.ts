@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildrenOutletContexts } from '@angular/router';
+import { ChildrenOutletContexts, Router } from '@angular/router';
 import { slideInAnimation } from './animations/slideIn.animation';
 
 export interface Tile {
@@ -18,7 +18,8 @@ export interface Tile {
 export class AppComponent implements OnInit {
   title = 'myWebsite';
 
-  constructor(private contexts: ChildrenOutletContexts) {}
+  constructor(private contexts: ChildrenOutletContexts,
+    private router: Router) {}
 
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
@@ -78,5 +79,26 @@ export class AppComponent implements OnInit {
       el.style.setProperty('--x', this.x + "px");
       el.style.setProperty('--y', this.y + "px");
     });
+
+    this.reveal();
+    this.router.events.subscribe(
+      () => this.reveal()
+    )
+    window.addEventListener("scroll", this.reveal);
+  }
+
+  // Add classes to elements when they come into view to animate them
+  reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
   }
 }

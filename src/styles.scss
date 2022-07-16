@@ -4,3 +4,57 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.block {
+    padding: 100px 250px;
+    min-height: 500px;
+}
+
+.block1 {
+    @extend .block;
+    background-color: $color2;   
+}
+
+.block2 {
+    @extend .block;
+    background-color: $color3;   
+}
+
+.block3 {
+    @extend .block;
+    background-color: $color4;   
+}
+
+.block4 {
+    @extend .block;
+    background-color: $color5;   
+}
+
+.block5 {
+    @extend .block;
+    background-color: $color1;   
+}
+
+app-work-experience {
+    display: block;
+    margin-bottom: 25px;
+}
+
+app-education {
+    display: block;
+    margin-bottom: 25px;
+}
+
+app-award {
+    display: block;
+    margin-bottom: 25px;
+}
+
+app-certificate {
+    display: block;
+    margin-bottom: 25px;
+}
+
+app-card {
+    display: block;
+}

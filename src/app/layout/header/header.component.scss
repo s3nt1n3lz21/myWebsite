@@ -1,25 +1,17 @@
 @import '../../theme.scss';
 
-  p {
-    margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-  .spacer2 {
-    flex: 5;
-  }
-
   .fixed-spacer {
     height: 100px; // Use a default height of 100px if not using flex
+  }
+
+  .toolbar-links {
+    margin: 0px 100px 0px auto;
+    display: flex;
   }
 
   .toolbar {
     font-family: $font-family-2;
     position: fixed;
-    // border-bottom: 3px solid $color1;
     top: 0;
     left: 0;
     right: 0;
@@ -27,69 +19,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-color: $primary;
-    // background: rgba($color4, 0.4);
-    color: $color1;
+    color: white;
     font-weight: 600;
     font-size: $font-size-1;
     z-index: 100;
+    padding-top: 30px;
 
     transition: all 0.5s;
+  }
 
-    .toolbar-row {
-        flex: 1;
-        justify-content: center;
-        width: 100%;
-        display: flex;
+  .toolbar-row {
+    width: 100%;
+    display: flex;
+  }
 
-        .item-container{
-            justify-content: center;
-            align-items: center;
-        }
+  .item-container {
+      justify-content: center;
+      align-items: center;
+  }
 
-        .toolbar-row-item {
-          display: flex;
-          flex: 1;
-          align-self: center;
-          justify-content: center;
-          align-items: center;
-        }
+  .toolbar-row-item {
+    display: flex;
+    flex: 1;
+    min-width: 120px;
+    max-width: 120px;
+    align-self: right;
+    justify-content: center;
+    align-items: center;
+  }
 
-        .toolbar-row-item-dropdown {
-          position: relative;
-          align-self: center;
-        }
+  .toolbar-row-item-dropdown {
+    position: relative;
+    align-self: center;
+  }
 
-        .toolbar-row-link {
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            // border: black;
-            // border-width: 1px;
-            // border-style: solid;
-            margin: 15px;
-            color: $color1;
+  .toolbar-row-link {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      // border: black;
+      // border-width: 1px;
+      // border-style: solid;
+      margin: 15px;
+      color: white;
 
-            text-decoration: underline solid $color5;
-            text-underline-offset: 7px;
-            text-decoration-thickness: 2px;
+      text-decoration: underline solid white;
+      text-underline-offset: 7px;
+      text-decoration-thickness: 2px;
 
-            span {
-                margin: 6px;
-            }
-        }
+      span {
+          margin: 6px;
+      }
+  }
 
-        .toolbar-row-link:hover {
-            // background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-            // border-color: rgba(27,31,35,.35);
-            // background-position: -.5em;
-            color: $tertiary;
-            text-decoration: underline solid $tertiary;
-            text-decoration-thickness: 2px;
-            // border-color: $tertiary;
-          }
-    }
+  .toolbar-row-link:hover {
+      // background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+      // border-color: rgba(27,31,35,.35);
+      // background-position: -.5em;
+      color: $tertiary;
+      text-decoration: underline solid $tertiary;
+      text-decoration-thickness: 2px;
+      // border-color: $tertiary;
   }
 
   .toolbar.scrolled {
@@ -126,43 +117,32 @@
     text-align: center;
   }
 
-  // .content:before {
-  //   filter: blur(8px);
-  // }
-
   .dropdown {
-    // border: 1px solid $secondary;
     display: flex;
     padding: 5px;
     width: 200px;
     height: 50px;
-    // background: rgba($tertiary, 1);
     justify-content: center;
     align-items: center;
+  }
 
-    // .dropdown-text {
-    //   height: 
-    // }
-    .icon {
-      margin: 0px;
-      margin-left: 5px;
-      width: 30px;
-    }
+  .icon {
+    margin: 0px;
+    margin-left: 5px;
+    width: 30px;
+  }
 
-    .icon-rotated {
-      transform: rotate(180deg);
-    }
+  .icon-rotated {
+    transform: rotate(180deg);
   }
 
   .dropdown:hover {
     cursor: pointer;
-    // background: rgba($tertiary, 0.8);
     color: $tertiary;
     
     .icon {
       fill: $tertiary;
     }
-    // border: 1px solid $tertiary;
   }
 
   .dropdown:hover + .download-options {
@@ -175,11 +155,7 @@
 
   .download-options {
     display: none;
-    // margin-top: 10px;
     position: absolute;
-    // left: -50%;
-    // top: 50%;
-    // display: flex;
     flex-direction: column;
     background: $primary;
     width: 100%;
@@ -205,34 +181,23 @@
   .ng-dropdown-panel {
     height: 100px;
   }
+
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.2em;
-    font-size: $font-size-1-5;
-    color: $secondary;
+    font-size: $font-size-3;
+    color: white;
+    padding-left: 100px;
   }
+
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    // color: #125699;
   }
-
-
-
-
- 
-
-
-
-
-
-
-
- 

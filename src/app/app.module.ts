@@ -17,9 +17,11 @@ import { SocialResolverService } from './pages/social/social-resolver.service';
 import { PortfolioResolverService } from './pages/portfolio/portfolio-resolver.service';
 import { BlogResolverService } from './pages/blog/blog-resolver.service';
 import { ServicesResolverService } from './pages/services/services-resolver.service';
-import { CertificateComponent } from './components/certificate/certificate.component';
+import { EducationComponent } from './components/education/education.component';
+import { AwardComponent } from './components/award/award.component';
 import { CardComponent } from './components/card/card.component';
-import { ServiceComponent } from './components/service/service.component';
+import { SharedModule } from './shared/shared.module';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,13 @@ import { ServiceComponent } from './components/service/service.component';
     // Pages
     HomeComponent,
 
+    SummaryComponent,
+
 
     // Components
   ],
   imports: [
+    SharedModule,
     CommonModule,
     BrowserModule,
     AppRoutingModule,

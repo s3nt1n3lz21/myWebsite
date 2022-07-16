@@ -2,7 +2,6 @@
 
 .footer {
     font-family: $font-family-2;
-    // position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -11,13 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-color: $primary;
-    // background: rgba($color2, 1);
-    color: $color1;
+    color: white;
     font-weight: 600;
     font-size: $font-size-1;
     z-index: 100;
-    // border-top: 3px solid $tertiary;
 
     .footer-top {
       display: flex;
@@ -40,4 +36,4 @@
       justify-content: center;
       align-items: center;
     }
-  }
+}

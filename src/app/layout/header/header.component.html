@@ -1,60 +1,64 @@
 <div (scroll)="onScroll($event)" class="toolbar" role="banner">
     <div class="toolbar-row">
-      <div class="spacer"></div>
       <div class="title" (click)="router.navigate(['home'])">
         <span>NEIL SMITH</span>
       </div>
-      <div class="spacer2"></div>
-      <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['home'])">
-          Home
-        </a>
-      </div>
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['services'])">
-          Services
-        </a>
-      </div> -->
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['certificates'])">
-          Certificates
-        </a>
-      </div> -->
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['portfolio'])">
-          Portfolio
-        </a>
-      </div> -->
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['about'])">
-          About
-        </a>
-      </div> -->
-      <!-- <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['blogs'])">
-          Blogs
-        </a>
-      </div> -->
-      <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/neil-smith-576503151/">
-          LinkedIn
-        </a>
-      </div>
-      <div class="toolbar-row-item">
-        <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://github.com/s3nt1n3lz21">
-          GitHub
-        </a>
-      </div>
-      <!-- <div class="toolbar-row-item-dropdown">
-        <div class="dropdown">
-          Download CV
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+      <div class="toolbar-links">
+        <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['home'])">
+            Home
+          </a>
         </div>
-        <div class="download-options">
-          <a href="../assets/files/MyCV.pdf" download class="download-option first">PDF</a>
-          <a href="../assets/files/MyCV.docx" download class="download-option">DOC</a>
+        <!-- <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['services'])">
+            Services
+          </a>
+        </div> -->
+        <!-- <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['certificates'])">
+            Certificates
+          </a>
+        </div> -->
+        <!-- <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['portfolio'])">
+            Portfolio
+          </a>
+        </div> -->
+        <!-- <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['about'])">
+            About
+          </a>
+        </div> -->
+        <!-- <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['blogs'])">
+            Blogs
+          </a>
+        </div> -->
+        <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['cv'])">
+            CV
+          </a>
         </div>
-      </div> -->
-      <div class="spacer"></div>
+        <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/neil-smith-576503151/">
+            LinkedIn
+          </a>
+        </div>
+        <div class="toolbar-row-item">
+          <a class="toolbar-row-link" target="_blank" rel="noopener" href="https://github.com/s3nt1n3lz21">
+            GitHub
+          </a>
+        </div>
+        <!-- <div class="toolbar-row-item-dropdown">
+          <div class="dropdown">
+            Download CV
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+          </div>
+          <div class="download-options">
+            <a href="../assets/files/MyCV.pdf" download class="download-option first">PDF</a>
+            <a href="../assets/files/MyCV.docx" download class="download-option">DOC</a>
+          </div>
+        </div> -->
+      </div>
     </div>
   </div>

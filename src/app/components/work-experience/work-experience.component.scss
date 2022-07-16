@@ -1,0 +1,45 @@
+@import '../../theme.scss';
+
+.work-experience {
+    background-color: $color1;
+    border-radius: 4px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+        "date jobTitle"
+        "location client"
+        "description description";
+    }
+
+    &__job-title {
+        grid-area: jobTitle;
+    }
+
+    &__client {
+        grid-area: client;
+    }
+
+    &__date {
+        grid-area: date;
+    }
+
+    &__location {
+        grid-area: location;
+    }
+
+    &__description {
+        grid-area: description;
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    &__description-item {
+        font-weight: bold;
+    }
+}
