@@ -11,10 +11,12 @@
 
     border-radius: 4px;
     // background-color: $color3;
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 60px);
+    min-width: calc(100% - 60px);
     padding: 30px;
 
-    align-items: center;
+    // align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     color: white;

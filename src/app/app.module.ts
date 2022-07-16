@@ -21,6 +21,7 @@ import { EducationComponent } from './components/education/education.component';
 import { AwardComponent } from './components/award/award.component';
 import { CardComponent } from './components/card/card.component';
 import { SharedModule } from './shared/shared.module';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,8 @@ import { SharedModule } from './shared/shared.module';
 
     // Pages
     HomeComponent,
+
+    SummaryComponent,
 
 
     // Components

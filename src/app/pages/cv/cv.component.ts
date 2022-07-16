@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IAward } from 'src/app/model/IAward';
 import { IEducation } from 'src/app/model/IEducation';
 import { IWorkExperience } from 'src/app/model/IWorkExperience';
-
+import * as d3 from 'd3';
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
@@ -12,23 +12,86 @@ export class CVComponent implements OnInit {
 
   constructor() { }
 
-  skills = {
-    "Git": 3.5,
-    "JavaScript": 3.25,
-    "HTML": 3,
-    "SCSS": 3,
-    "NPM": 3,
-    "Agile": 2.75,
-    "TypeScript": 2.5,
-    "Angular 12": 2.5,
-    "Azure DevOps": 1.5,
-    "Java 8": 1.5,
-    "Maven": 1.5,
-    "Jasmine/Karma": 1.25,
-    "Python": 1,
-    "Docker": 0.5,
-    "JUnit": 0.5
-  }
+  // skills = {
+  //   "Git": 3.5,
+  //   "JavaScript": 3.25,
+  //   "HTML": 3,
+  //   "SCSS": 3,
+  //   "NPM": 3,
+  //   "Agile": 2.75,
+  //   "TypeScript": 2.5,
+  //   "Angular 12": 2.5,
+  //   "Azure DevOps": 1.5,
+  //   "Java 8": 1.5,
+  //   "Maven": 1.5,
+  //   "Jasmine/Karma": 1.25,
+  //   "Python": 1,
+  //   "Docker": 0.5,
+  //   "JUnit": 0.5
+  // }
+
+  skills = [
+    {
+      name: 'Git',
+      value: 3.5
+    },
+    {
+      name: 'JavaScript',
+      value: 3.25
+    },
+    {
+      name: 'HTML',
+      value: 3
+    },
+    {
+      name: 'SCSS',
+      value: 3
+    },
+    {
+      name: 'NPM',
+      value: 3
+    },
+    {
+      name: 'Agile',
+      value: 2.75
+    },
+    {
+      name: 'TypeScript',
+      value: 2.5
+    },
+    {
+      name: 'Angular 12',
+      value: 2.5
+    },
+    {
+      name: 'Azure DevOps',
+      value: 1.5
+    },
+    {
+      name: 'Java 8',
+      value: 1.5
+    },
+    {
+      name: 'Maven',
+      value: 1.5
+    },
+    {
+      name: 'Jasmine/Karma',
+      value: 1.25
+    },
+    {
+      name: 'Python',
+      value: 1
+    },
+    {
+      name: 'Docker',
+      value: 0.5
+    },
+    {
+      name: 'JUnit',
+      value: 0.5
+    },
+  ]
 
   workExperiences: IWorkExperience[] = [
     {
@@ -168,6 +231,80 @@ export class CVComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    var data = this.skills;
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 40, left: 90},
+    width = 1500 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select(".block2")
+  .append("svg")
+  .attr("class", "reveal")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([0, Math.max(...data.map(d => d.value))])
+    .range([ 0, width]);
+
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
+
+  // Y axis
+  var y = d3.scaleBand()
+    .domain(data.map(function(d) { return d.name }))
+    .range([ 0, height ])
+    .padding(0);
+
+  svg.append("g")
+    .call(d3.axisLeft(y))
+
+  //Bars
+  data.forEach((d) => {
+    // For each row draw circles and line
+    const range = this.range(0.25, d.value + 0.25, 0.25)
+    
+    svg.selectAll("circlesBeingCreated")
+    .data(range)
+    .enter()
+    .append("circle")
+    .attr("cx", function(r){ return x(r) })
+    .attr("cy", y(d.name))
+    .attr("r", 20)
+    .attr("fill", "blue")
+  }) 
+
+  svg.selectAll("rectanglesBeingCreated")
+  .data(data)
+  .enter()
+  .append("rect")
+  .attr("x", x(0))
+  .attr("y", function(d) { return y(d.name) })
+  .attr("width", function(d) { return x(d.value) })
+  .attr("height", 10)
+  // .attr('stroke', 'black')
+  .attr("fill", "blue")
+  
+
+
+
+    // .attr("x", function(d) { return x(d.Country); })
+    // .attr("y", function(d) { return y(d.Value); })
+    // .attr("width", x.bandwidth())
+    // .attr("height", function(d) { return height - y(d.Value); })
+    // .attr("fill", "#69b3a2")
   }
 
+
+  range = (start, stop, step = 1) =>
+  Array(Math.ceil((stop - start) / step)).fill(start).map((x, y) => x + y * step)
 }
