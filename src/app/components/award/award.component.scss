@@ -3,4 +3,28 @@
 .award {
     background-color: $color2;
     border-radius: 4px;
+
+    &__grid {
+        display: grid;
+        grid-template-areas: 
+        "date title money"
+        "description description description";
+        grid-template-columns: 1fr 3fr 6fr;
+    }
+
+    &__date {
+        grid-area: date;
+    }
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__money {
+        grid-area: money;
+    }
+
+    &__description {
+        grid-area: description;
+    }
 }

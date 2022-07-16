@@ -8,3 +8,10 @@
     background-color: $color1;
     border-radius: 4px;
 }
+
+.certificate__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+}

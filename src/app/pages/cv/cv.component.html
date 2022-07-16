@@ -35,7 +35,9 @@
 
     <div class="block5">
         <h1 class="reveal">Certificates</h1>
-        <app-certificate class="reveal" [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+        <div class="certificate__grid">
+            <app-certificate class="reveal" [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+        </div>
     </div>
 </div>
 

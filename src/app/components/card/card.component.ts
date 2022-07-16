@@ -12,16 +12,16 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @ViewChild('card', {static: true}) cardElement: ElementRef;
+  // @ViewChild('card', {static: true}) cardElement: ElementRef;
 
-  @Input() set classInput(classes: string[]) {
-    console.log(this.cardElement);
-    console.log(typeof this.cardElement)
-    classes.forEach(
-      (c) => {
-        this.cardElement.nativeElement.classList.add(c);
-      }
-    )
-  }
+  // @Input() set classInput(classes: string[]) {
+  //   console.log(this.cardElement);
+  //   console.log(typeof this.cardElement)
+  //   classes.forEach(
+  //     (c) => {
+  //       this.cardElement.nativeElement.classList.add(c);
+  //     }
+  //   )
+  // }
 
 }

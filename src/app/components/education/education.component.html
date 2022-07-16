@@ -1,7 +1,9 @@
 <app-card class="education">
-    <h2>{{ education.type }}</h2>
-    <h3>{{ education.institution }}</h3>
-    <p>{{ education.startDate }} - {{ education.endDate }}</p>
-    <p>{{ education.location }}</p>
-    <p>{{ education.description }}</p>
+    <div class="education__grid">
+        <h2 class="education__type">{{ education.type }}</h2>
+        <h3 class="education__institution">{{ education.institution }}</h3>
+        <h3 class="education__date">{{ education.startDate }} - {{ education.endDate }}</h3>
+        <h3 class="education__location">{{ education.location }}</h3>
+        <p class="education__description">{{ education.description }}</p>
+    </div>
 </app-card>
