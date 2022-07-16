@@ -61,7 +61,7 @@
       // border: black;
       // border-width: 1px;
       // border-style: solid;
-      margin: 15px;
+      padding: 15px;
       color: white;
 
       text-decoration: underline solid white;
@@ -80,6 +80,8 @@
       color: $tertiary;
       text-decoration: underline solid $tertiary;
       text-decoration-thickness: 2px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 25px;
       // border-color: $tertiary;
   }
 
