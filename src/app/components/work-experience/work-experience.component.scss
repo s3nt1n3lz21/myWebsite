@@ -2,7 +2,8 @@
 
 .work-experience {
     background-color: $color1;
-    border-radius: 4px;
+    border-radius: 30px;
+    $text: white;
 
     &__grid {
         display: grid;
@@ -15,31 +16,38 @@
 
     &__job-title {
         grid-area: jobTitle;
+        color: $text;
     }
 
     &__client {
         grid-area: client;
+        color: $text;
     }
 
     &__date {
         grid-area: date;
+        color: $text;
     }
 
     &__location {
         grid-area: location;
+        color: $text;
     }
 
     &__description {
         grid-area: description;
-        padding-top: 20px;
+        color: $text;
+        padding-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         column-gap: 40px;
         row-gap: 20px;
+        border-top: 1px solid white;
     }
 
     &__description-item {
+        color: $text;
         font-weight: bold;
     }
 }
