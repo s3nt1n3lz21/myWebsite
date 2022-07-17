@@ -1,8 +1,8 @@
 <div class="cv">
     <div class="block1">
-        <h1 class="reveal">Summary</h1>
+        <h1 class="title title-alt reveal">Summary</h1>
         <app-card class="reveal summary">
-            <h3>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h3>
+            <h2>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h2>
             <ul>
                 <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
                 <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
@@ -19,22 +19,22 @@
     </div> -->
 
     <div class="block3">
-        <h1 class="reveal">Work Experience</h1>
+        <h1 class="title reveal">Work Experience</h1>
         <app-work-experience class="reveal" [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
     </div>
 
     <div class="block4">
-        <h1 class="reveal">Education</h1>
+        <h1 class="title title-alt reveal">Education</h1>
         <app-education class="reveal" [educationInput]="education" *ngFor="let education of educations"></app-education>
     </div>
 
     <div class="block5">
-        <h1 class="reveal">Awards</h1>
+        <h1 class="title title-alt reveal">Awards</h1>
         <app-award class="reveal" [awardInput]="award" *ngFor="let award of awards"></app-award>
     </div>
 
     <div class="block5">
-        <h1 class="reveal">Certificates</h1>
+        <h1 class="title reveal">Certificates</h1>
         <div class="certificate__grid">
             <app-certificate class="reveal" [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
         </div>

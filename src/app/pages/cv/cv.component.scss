@@ -1,12 +1,12 @@
 @import '../../theme.scss';
 
 .cv {
-    margin-top: 100px;
+    // margin-top: 100px;
 }
 
 .summary {
     background-color: $color1;
-    border-radius: 4px;
+    border-radius: 30px;
 }
 
 .certificate__grid {
@@ -14,4 +14,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 20px;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.title-alt {
+    color: $color1;
 }
