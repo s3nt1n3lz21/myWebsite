@@ -5,7 +5,7 @@
       </div>
       <div class="toolbar-links">
         <div class="toolbar-row-item">
-          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['home'])">
+          <a routerLink="/home" routerLinkActive="active-route" class="toolbar-row-link" rel="noopener" (click)="router.navigate(['home'])">
             HOME
           </a>
         </div>
@@ -35,7 +35,7 @@
           </a>
         </div> -->
         <div class="toolbar-row-item">
-          <a class="toolbar-row-link" target="_blank" rel="noopener" (click)="router.navigate(['cv'])">
+          <a routerLink="/cv" routerLinkActive="active-route" class="toolbar-row-link" rel="noopener" (click)="router.navigate(['cv'])">
             CV
           </a>
         </div>

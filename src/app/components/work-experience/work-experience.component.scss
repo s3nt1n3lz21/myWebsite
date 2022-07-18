@@ -7,7 +7,7 @@
     border-radius: 30px;
     $text: white;
 
-    &__grid {
+    &__header {
         display: grid;
         grid-template-columns: 1fr 5fr;
         grid-template-areas: 
@@ -16,30 +16,42 @@
         "description description";
     }
 
+    &__footer {
+        margin: 0px -30px -30px -30px;
+        border-radius: 30px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-color: white;
+        color: $color1;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+        "date jobTitle"
+        "location client";
+    }
+
+    &__grid {
+    }
+
     &__job-title {
         grid-area: jobTitle;
-        color: $text;
     }
 
     &__client {
         grid-area: client;
-        color: $text;
     }
 
     &__date {
         grid-area: date;
-        color: $text;
     }
 
     &__location {
         grid-area: location;
-        color: $text;
     }
 
     &__description {
         grid-area: description;
-        color: $text;
-        padding-top: 40px;
+        padding: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -49,7 +61,7 @@
     }
 
     &__description-item {
-        color: $text;
+        color: $color1;
         font-weight: bold;
     }
 }

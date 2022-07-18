@@ -7,6 +7,7 @@ import { CertificateComponent } from 'src/app/components/certificate/certificate
 import { EducationComponent } from 'src/app/components/education/education.component';
 import { AwardComponent } from 'src/app/components/award/award.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { SkillsComponent } from 'src/app/components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CertificateComponent,
     EducationComponent,
     AwardComponent,
+    SkillsComponent
   ],
   imports: [
     SharedModule,

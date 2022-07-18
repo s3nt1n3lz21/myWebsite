@@ -6,7 +6,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .block {
-    padding: 100px 250px;
+    padding: 100px 350px;
     min-height: 500px;
 }
 
@@ -37,24 +37,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 app-work-experience {
     display: block;
-    margin-bottom: 25px;
+    margin: 50px 0px;
 }
 
 app-education {
     display: block;
-    margin-bottom: 25px;
+    margin: 50px 0px;
 }
 
 app-award {
     display: block;
-    margin-bottom: 25px;
+    margin: 50px 0px;
 }
 
 app-certificate {
     display: block;
-    margin-bottom: 25px;
+    margin: 50px 0px;
 }
 
 app-card {
+    display: block;
+}
+
+app-skills {
     display: block;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChildrenOutletContexts, Router } from '@angular/router';
 import { slideInAnimation } from './animations/slideIn.animation';
 
@@ -15,7 +15,7 @@ export interface Tile {
   styleUrls: ['./app.component.scss'],
   animations: [slideInAnimation]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'myWebsite';
 
   constructor(private contexts: ChildrenOutletContexts,
@@ -85,6 +85,10 @@ export class AppComponent implements OnInit {
       () => this.reveal()
     )
     window.addEventListener("scroll", this.reveal);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener("scroll", this.reveal);
   }
 
   // Add classes to elements when they come into view to animate them

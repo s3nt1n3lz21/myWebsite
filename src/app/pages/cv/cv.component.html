@@ -1,6 +1,6 @@
 <div class="cv">
     <div class="block1">
-        <h1 class="title title-alt reveal">Summary</h1>
+        <h1 class="title title-alt reveal">Summary.</h1>
         <app-card class="reveal summary">
             <h2>Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h2>
             <ul>
@@ -12,32 +12,39 @@
                 <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
             </ul>
         </app-card>
+        <h1 class="title title-alt reveal">.....</h1>
     </div>
 
-    <!-- <div class="block2">
-        <h1 class="reveal">Skills</h1>
-    </div> -->
+    <div class="block2">
+        <h1 class="title reveal">Skills.</h1>
+        <app-skills class="reveal" [skillsInput]="skills"></app-skills>
+        <h1 class="title reveal">.....</h1>
+    </div>
 
     <div class="block3">
-        <h1 class="title reveal">Work Experience</h1>
+        <h1 class="title reveal">Work Experience.</h1>
         <app-work-experience class="reveal" [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
+        <h1 class="title reveal">.....</h1>
     </div>
 
     <div class="block4">
-        <h1 class="title title-alt reveal">Education</h1>
+        <h1 class="title title-alt reveal">Education.</h1>
         <app-education class="reveal" [educationInput]="education" *ngFor="let education of educations"></app-education>
+        <h1 class="title title-alt reveal">.....</h1>
     </div>
 
     <div class="block5">
-        <h1 class="title title-alt reveal">Awards</h1>
+        <h1 class="title title-alt reveal">Awards.</h1>
         <app-award class="reveal" [awardInput]="award" *ngFor="let award of awards"></app-award>
+        <h1 class="title title-alt reveal">.....</h1>
     </div>
 
-    <div class="block5">
-        <h1 class="title reveal">Certificates</h1>
+    <div class="block2">
+        <h1 class="title reveal">Certificates.</h1>
         <div class="certificate__grid">
             <app-certificate class="reveal" [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
         </div>
+        <h1 class="title reveal">.....</h1>
     </div>
 </div>
 

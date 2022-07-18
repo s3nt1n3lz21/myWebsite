@@ -1,13 +1,13 @@
 export interface ICertificate {
-    title: string,
-    url: string,
-    description: string
+    name: string,
+    src: string,
+    link: string
 }
 
-export function emptyCertificate(): ICertificate {
+export function emptyICertificate(): ICertificate {
     return {
-        title: '',
-        url: '',
-        description: ''
+        name: '',
+        src: '',
+        link: ''
     }
 }
