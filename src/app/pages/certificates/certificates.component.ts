@@ -14,11 +14,11 @@ export class CertificatesComponent implements OnInit {
   }
 
   private _certificates: ICertificate[] = [
-    {
-      title: 'RXJS 7 And Observables: Introduction',
-      url: 'https://www.udemy.com/certificate/UC-48f5a81f-7c33-4c19-81ed-7535af566712/',
-      description: ''
-    }
+    // {
+    //   name: 'RXJS 7 And Observables: Introduction',
+    //   src: 'https://www.udemy.com/certificate/UC-48f5a81f-7c33-4c19-81ed-7535af566712/',
+    //   link: ''
+    // }
   ]
 
   public get certificates() {

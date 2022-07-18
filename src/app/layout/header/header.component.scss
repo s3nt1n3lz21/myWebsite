@@ -206,3 +206,9 @@
   a:hover {
     // color: #125699;
   }
+
+  .active-route {
+    color: $color1;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+  }

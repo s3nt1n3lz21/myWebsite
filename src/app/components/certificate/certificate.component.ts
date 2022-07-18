@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { emptyCertificate, ICertificate } from 'src/app/model/ICertificate';
+import { emptyICertificate, ICertificate } from 'src/app/model/ICertificate';
 
 @Component({
   selector: 'app-certificate',
@@ -13,8 +13,8 @@ export class CertificateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public certificate: string = '';
-  @Input() set certificateInput(certificate: '') {
+  public certificate: ICertificate = emptyICertificate();
+  @Input() set certificateInput(certificate: ICertificate) {
     this.certificate = certificate;
   }
 }

@@ -1,12 +1,16 @@
 <app-card class='work-experience'>
     <div class="work-experience__grid">
-        <h2 class="work-experience__job-title">{{ workExperience.jobTitle }}</h2>
-        <h2 class="work-experience__client" *ngIf="workExperience.agency">{{ workExperience.agency }} - {{ workExperience.client }}</h2>
-        <h2 class="work-experience__client" *ngIf="!workExperience.agency">{{ workExperience.client }}</h2>
-        <h3 class="work-experience__date">{{ workExperience.startDate }} - {{ workExperience.endDate }}</h3>
-        <h3 class="work-experience__location">{{ workExperience.location }}</h3>
-        <ul class="work-experience__description">
-            <li class="work-experience__description-item" *ngFor="let item of workExperience.description">{{ item }}</li>
-        </ul>
+        <div class="work-experience__header">
+            <h2 class="work-experience__job-title">{{ workExperience.jobTitle }}</h2>
+            <h2 class="work-experience__client" *ngIf="workExperience.agency">{{ workExperience.agency }} - {{ workExperience.client }}</h2>
+            <h2 class="work-experience__client" *ngIf="!workExperience.agency">{{ workExperience.client }}</h2>
+            <h3 class="work-experience__date">{{ workExperience.startDate }} - {{ workExperience.endDate }}</h3>
+            <h3 class="work-experience__location">{{ workExperience.location }}</h3>
+        </div>
+        <div class="work-experience__footer">
+            <ul class="work-experience__description">
+                <li class="work-experience__description-item" *ngFor="let item of workExperience.description">{{ item }}</li>
+            </ul>
+        </div>
     </div>
 </app-card>
