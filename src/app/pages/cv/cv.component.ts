@@ -321,6 +321,7 @@ export class CVComponent implements OnInit, OnDestroy {
 //   range = (start, stop, step = 1) =>
 //   Array(Math.ceil((stop - start) / step)).fill(start).map((x, y) => x + y * step)
     this.animateBarOnShow()  
+    this.reveal()
     window.addEventListener("scroll", this.animateBarOnShow);
   }
 
@@ -330,7 +331,6 @@ export class CVComponent implements OnInit, OnDestroy {
 
   animateBarOnShow() {
     var reveals: NodeListOf<HTMLElement> = document.querySelectorAll(".bar");
-    console.log('reveals: ', reveals);
 
     const colors = [
       '#2e515f',
@@ -350,5 +350,22 @@ export class CVComponent implements OnInit, OnDestroy {
         reveals[i].style.removeProperty('animation')
       }
     }
+  }
+
+  reveal() {
+    var reveals = document.querySelector('.cv').querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      // console.log('windowHeight: ', windowHeight);
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      // console.log('elementTop: ', elementTop);
+      var elementVisible = 0;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+    // console.log('reveals: ', reveals);
   }
 }

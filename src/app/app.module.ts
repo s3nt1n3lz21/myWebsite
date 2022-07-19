@@ -23,6 +23,7 @@ import { CardComponent } from './components/card/card.component';
 import { SharedModule } from './shared/shared.module';
 import { SummaryComponent } from './components/summary/summary.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { RevealDirective } from './directives/reveal.directive';
 
 @NgModule({
   declarations: [

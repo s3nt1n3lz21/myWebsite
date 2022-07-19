@@ -8,6 +8,7 @@ import { EducationComponent } from 'src/app/components/education/education.compo
 import { AwardComponent } from 'src/app/components/award/award.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
+import { RevealDirective } from 'src/app/directives/reveal.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkillsComponent } from 'src/app/components/skills/skills.component';
     CertificateComponent,
     EducationComponent,
     AwardComponent,
-    SkillsComponent
+    SkillsComponent,
+    RevealDirective
   ],
   imports: [
     SharedModule,
