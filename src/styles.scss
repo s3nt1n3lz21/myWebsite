@@ -6,8 +6,15 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .block {
-    padding: 100px 350px;
+    padding: 100px 150px;
     min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-block {
+    width: 100%;
+    max-width: 1500px;
 }
 
 .block1 {

@@ -9,14 +9,17 @@
 .summary {
     background-color: $color1;
     border-radius: 30px;
-    padding: 100px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
 
     &__title {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        padding: 0px 50px;
     }
 
     &__description {

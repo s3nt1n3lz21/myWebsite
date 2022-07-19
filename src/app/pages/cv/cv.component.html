@@ -1,53 +1,65 @@
 <div class="cv">
     <div class="block1">
-        <h1 appReveal class="title title-alt">Summary.</h1>
-        <div appReveal class="summary">
-            <!-- <h2 class="summary__title">Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h2> -->
-            <h2 class="summary__title">Front-End Software Developer. 4 years of experience. Worked With Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h2>
-            <ul class="summary__description">
-                <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
-                <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
-                <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
-                <li>Building responsive mobile first and printable designs using BEM methodology.</li>
-                <li>Creating reactive forms and handling user inputs with Angular Material.</li>
-                <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
-            </ul>
+        <div class="inner-block">
+            <h1 appReveal class="title title-alt">Summary.</h1>
+            <div appReveal class="summary">
+                <!-- <h2 class="summary__title">Front-End Software Developer with 4 years of experience working on UIs mainly using Angular and TypeScript. Looking for a fully remote contract role, available to start immediately. Experienced with:</h2> -->
+                <h2 class="summary__title">Front-End Software Developer With 4 years of experience creating websites with Angular and TypeScript. Experienced with:</h2>
+                <ul class="summary__description">
+                    <li>Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
+                    <li>Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
+                    <li>Writing unit tests in Jasmine and setting up a reusable Testbed with mocks.</li>
+                    <li>Building responsive mobile first and printable designs using BEM methodology.</li>
+                    <li>Creating reactive forms and handling user inputs with Angular Material.</li>
+                    <li>Improving UX with Modals, Notifications, and Persisting App State on page refresh.</li>
+                </ul>
+            </div>
+            <!-- <app-card class="reveal summary"> -->
+            <!-- </app-card> -->
+            <h1 appReveal class="title title-alt">.....</h1>
         </div>
-        <!-- <app-card class="reveal summary"> -->
-        <!-- </app-card> -->
-        <h1 appReveal class="title title-alt">.....</h1>
     </div>
 
     <div class="block2">
-        <h1 appReveal class="title"><i class="title-icon fa-solid fa-flask"></i>Skills.</h1>
-        <app-skills appReveal [skillsInput]="skills"></app-skills>
-        <h1 appReveal class="title">.....</h1>
+        <div class="inner-block">
+            <h1 appReveal class="title"><i class="title-icon fa-solid fa-flask"></i>Skills.</h1>
+            <app-skills appReveal [skillsInput]="skills"></app-skills>
+            <h1 appReveal class="title">.....</h1>
+        </div>
     </div>
 
     <div class="block3">
-        <h1 appReveal class="title"><i class="title-icon fa-solid fa-briefcase"></i>Work Experience.</h1>
-        <app-work-experience appReveal [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
-        <h1 appReveal class="title">.....</h1>
+        <div class="inner-block">
+            <h1 appReveal class="title"><i class="title-icon fa-solid fa-briefcase"></i>Work Experience.</h1>
+            <app-work-experience appReveal [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
+            <h1 appReveal class="title">.....</h1>
+        </div>
     </div>
 
     <div class="block4">
-        <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-user-graduate"></i>Education.</h1>
-        <app-education appReveal [educationInput]="education" *ngFor="let education of educations"></app-education>
-        <h1 appReveal class="title title-alt">.....</h1>
+        <div class="inner-block">
+            <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-user-graduate"></i>Education.</h1>
+            <app-education appReveal [educationInput]="education" *ngFor="let education of educations"></app-education>
+            <h1 appReveal class="title title-alt">.....</h1>
+        </div>
     </div>
 
     <div class="block5">
-        <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-award"></i>Awards.</h1>
-        <app-award appReveal [awardInput]="award" *ngFor="let award of awards"></app-award>
-        <h1 appReveal class="title title-alt">.....</h1>
+        <div class="inner-block">
+            <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-award"></i>Awards.</h1>
+            <app-award appReveal [awardInput]="award" *ngFor="let award of awards"></app-award>
+            <h1 appReveal class="title title-alt">.....</h1>
+        </div>
     </div>
 
     <div class="block2">
-        <h1 appReveal class="title"><i class="title-icon fa-solid fa-certificate"></i>Certificates.</h1>
-        <div class="certificate__grid">
-            <app-certificate class="certficate__item .col-lg-3" appReveal [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+        <div class="inner-block">
+            <h1 appReveal class="title"><i class="title-icon fa-solid fa-certificate"></i>Certificates.</h1>
+            <div class="certificate__grid">
+                <app-certificate class="certficate__item .col-lg-3" appReveal [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+            </div>
+            <h1 appReveal class="title">.....</h1>
         </div>
-        <h1 appReveal class="title">.....</h1>
     </div>
 </div>
 
