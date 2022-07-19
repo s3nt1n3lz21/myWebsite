@@ -19,13 +19,13 @@
     </div>
 
     <div class="block2">
-        <h1 appReveal class="title">Skills.</h1>
+        <h1 appReveal class="title"><i class="title-icon fa-solid fa-flask"></i>Skills.</h1>
         <app-skills appReveal [skillsInput]="skills"></app-skills>
         <h1 appReveal class="title">.....</h1>
     </div>
 
     <div class="block3">
-        <h1 appReveal class="title">Work Experience.</h1>
+        <h1 appReveal class="title"><i class="title-icon fa-solid fa-briefcase"></i>Work Experience.</h1>
         <app-work-experience appReveal [workExperienceInput]="workExperience" *ngFor="let workExperience of workExperiences"></app-work-experience>
         <h1 appReveal class="title">.....</h1>
     </div>
@@ -37,13 +37,13 @@
     </div>
 
     <div class="block5">
-        <h1 appReveal class="title title-alt">Awards.</h1>
+        <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-award"></i>Awards.</h1>
         <app-award appReveal [awardInput]="award" *ngFor="let award of awards"></app-award>
         <h1 appReveal class="title title-alt">.....</h1>
     </div>
 
     <div class="block2">
-        <h1 appReveal class="title">Certificates.</h1>
+        <h1 appReveal class="title"><i class="title-icon fa-solid fa-certificate"></i>Certificates.</h1>
         <div class="certificate__grid">
             <app-certificate class="certficate__item .col-lg-3" appReveal [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
         </div>
