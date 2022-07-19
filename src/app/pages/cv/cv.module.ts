@@ -12,13 +12,13 @@ import { RevealDirective } from 'src/app/directives/reveal.directive';
 
 @NgModule({
   declarations: [
+    // RevealDirective,
     CVComponent,
     WorkExperienceComponent,
     CertificateComponent,
     EducationComponent,
     AwardComponent,
-    SkillsComponent,
-    RevealDirective
+    SkillsComponent
   ],
   imports: [
     SharedModule,

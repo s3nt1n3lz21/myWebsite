@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   {
     path: 'home',
-    component: HomeComponent,
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), 
     data: { animation: 'home' }
   },
   {

@@ -21,7 +21,11 @@ export class RevealDirective implements OnDestroy, AfterViewInit {
   private reveal() {
     var windowHeight = window.innerHeight;
     var elementTop = this.el.nativeElement.getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 0;
+    console.log('this.el: ', this.el);
+    console.log('elementTop: ', elementTop);
+    console.log('windowHeight: ', windowHeight);
+    console.log('diff: ', elementTop -  (windowHeight - elementVisible))
     if (elementTop < windowHeight - elementVisible) {
       this.el.nativeElement.classList.add("reveal-directive__revealed");
     } else {

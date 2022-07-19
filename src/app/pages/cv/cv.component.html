@@ -31,7 +31,7 @@
     </div>
 
     <div class="block4">
-        <h1 appReveal class="title title-alt">Education.</h1>
+        <h1 appReveal class="title title-alt"><i class="title-icon fa-solid fa-user-graduate"></i>Education.</h1>
         <app-education appReveal [educationInput]="education" *ngFor="let education of educations"></app-education>
         <h1 appReveal class="title title-alt">.....</h1>
     </div>
@@ -45,7 +45,7 @@
     <div class="block2">
         <h1 appReveal class="title">Certificates.</h1>
         <div class="certificate__grid">
-            <app-certificate appReveal [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
+            <app-certificate class="certficate__item .col-lg-3" appReveal [certificateInput]="certificate" *ngFor="let certificate of certificates"></app-certificate>
         </div>
         <h1 appReveal class="title">.....</h1>
     </div>

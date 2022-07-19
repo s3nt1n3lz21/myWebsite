@@ -1,4 +1,6 @@
 @import '../../theme.scss';
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '../../../styles.scss';
 
 .cv {
     // margin-top: 100px;
@@ -35,6 +37,11 @@
     column-gap: 20px;
 }
 
+.certificate__item {
+    // @extend .col-lg-3;
+    // @extend .col-md-2;
+}
+
 .title {
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.2em;
@@ -46,4 +53,13 @@
 
 .title-alt {
     color: $color1;
+}
+
+.title-icon {
+    padding-right: 30px;
+}
+
+.education-icon {
+    // @extend .fa-solid;
+    // @extend .fa-user-graduate;
 }
