@@ -20,9 +20,9 @@
         text-align: center;
         // text-transform: uppercase;
         padding: 0px 50px;
-        font-family: $font-family-3;
+        font-family: $font-family-2;
         font-weight: bold;
-        font-size: $font-size-4;
+        font-size: $font-size-3;
         line-height: 4rem;
     }
 
@@ -53,7 +53,8 @@
 }
 
 .title {
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-family-3;
+    font-size: $font-size-5;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;

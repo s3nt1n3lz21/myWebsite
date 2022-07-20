@@ -9,10 +9,10 @@
 
     &__header {
         display: grid;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 5fr 1fr;
         grid-template-areas: 
-        "date jobTitle"
-        "location client"
+        "jobTitle date"
+        "client location"
         "description description";
     }
 
@@ -35,10 +35,12 @@
 
     &__job-title {
         grid-area: jobTitle;
+        font-weight: bold;
     }
 
     &__client {
         grid-area: client;
+        font-weight: bold;
     }
 
     &__date {
