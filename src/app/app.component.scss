@@ -40,7 +40,8 @@
   }
 
   .content {
-    min-height: calc(100vh - 206px);
+    --content-height: calc(100vh - 206px);
+    min-height: --content-height;
   }
 
   .footer {

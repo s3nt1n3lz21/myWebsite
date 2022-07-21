@@ -204,6 +204,11 @@ export class CVComponent implements OnInit, OnDestroy {
       name: 'Angular',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086.jpg',
       link: 'https://www.udemy.com/certificate/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086/'
+    },
+    {
+      name: 'Python',
+      src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-98c9b09c-e16c-4723-b68a-92241fc99642.jpg',
+      link: 'https://www.udemy.com/certificate/UC-98c9b09c-e16c-4723-b68a-92241fc99642/'
     }
   ]
 
