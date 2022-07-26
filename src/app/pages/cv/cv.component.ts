@@ -209,6 +209,11 @@ export class CVComponent implements OnInit, OnDestroy {
       name: 'Python',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-98c9b09c-e16c-4723-b68a-92241fc99642.jpg',
       link: 'https://www.udemy.com/certificate/UC-98c9b09c-e16c-4723-b68a-92241fc99642/'
+    },
+    {
+      name: 'The Numpy Stack',
+      src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-294909d7-6411-4dcb-8787-7ba390f172d5.jpg',
+      link: 'https://www.udemy.com/certificate/UC-294909d7-6411-4dcb-8787-7ba390f172d5/'
     }
   ]
 
