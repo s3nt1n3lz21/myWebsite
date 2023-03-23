@@ -2,10 +2,10 @@
   <div class="row" *ngFor="let skill of skills; index as i">
     <div class="name">{{ skill.name }}</div>
     <div class="bar-container">
-        <div class="bar bar{{i}}">
-            <div class="bar-label">
-                {{skill.value}} Years
-            </div>
+        <div class="bar bar{{skill.value*4}}">
+        </div>
+        <div class="bar-label">
+          {{skill.value}} Years
         </div>
     </div>
   </div>

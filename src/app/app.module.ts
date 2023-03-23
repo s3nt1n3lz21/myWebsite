@@ -50,7 +50,7 @@ import { RevealDirective } from './directives/reveal.directive';
     FormsModule,
     MatSliderModule,
     MatGridListModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AboutResolverService,

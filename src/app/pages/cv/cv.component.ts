@@ -1,16 +1,17 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { IAward } from 'src/app/model/IAward';
 import { IEducation } from 'src/app/model/IEducation';
 import { IWorkExperience } from 'src/app/model/IWorkExperience';
 import * as d3 from 'd3';
 import { ISkill } from 'src/app/model/ISkill';
 import { ICertificate } from 'src/app/model/ICertificate';
+import { ICarouselSlide } from 'src/app/model/ICarouselSlide';
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.scss']
 })
-export class CVComponent implements OnInit, OnDestroy {
+export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   constructor() { }
 
@@ -32,38 +33,228 @@ export class CVComponent implements OnInit, OnDestroy {
   //   "JUnit": 0.5
   // }
 
+  // N-2
+  // 1
+  // 2
+
+  // N-3
+  // 1   1  
+  //   2    50%
+
+  // N-4
+  // 1     50%
+  // 2 2   0% 100%
+  //  3    50%
+
+  // 2
+  // 1 3
+  // 0
+
+  // 0
+  // -1 +1
+  // 0
+
+  // N-5
+  // Z-index //left   // relative index
+  // 1 1    30% 70%      2 3
+  // 2 2   10% 90%       1 4
+  // 3      50%           0
+
+  // N 4 MIN 1
+  // N 5 Min 2
+  // N 6 MIN 2
+
+  // -2 +2
+  // -1 +1
+  // 0
+
+  // N-6
+  // Z-index  // left     //relativeindex
+  // 1        // 50%      // 3
+  // 2 2      // 27% 83%  // 2 4
+  // 3 3      // 27% 83%  // 1 5
+  // 4        // 50%      // 0
+
+  // N-7
+  // Z-index   // left
+  // 1 1       // 100
+  // 2 2   66
+  // 3 3   33
+  // 4     0
+
+  // 
+
+  // Highest Zindex/current slide = Math.ceil((N + 1) / 2)
+  // Z-index from relativeIndex 
+
+  public get zIndexCurrentSlide() {
+    return Math.ceil((this.carouselSlides.length + 1)/2)
+  }
+
+  public getZIndexFromIndex(index: number) {
+    const indexDifference = Math.abs(this.currentSlideIndex - index);
+    // console.log('this.zIndexCurrentSlide: ', this.zIndexCurrentSlide);
+    console.log('//////////////////')
+    console.log('index: ', index);
+    console.log('indexDifference: ', indexDifference);
+    let isEvenNumberItems = this.carouselSlides.length % 2 == 0;
+    let zindex = 0;
+    if (indexDifference >= this.zIndexCurrentSlide) {
+      if (isEvenNumberItems) {
+        zindex = indexDifference - this.zIndexCurrentSlide + 2;
+      } else {
+        zindex = indexDifference - this.zIndexCurrentSlide + 1;
+      }
+    } else {
+      zindex = this.zIndexCurrentSlide - indexDifference;
+    }
+    console.log('zindex: ', zindex);
+    return zindex;
+  }
+
+  // Top css property
+  public getYPositionFromIndex(index: number) {
+    const maxTopDifference = 50; // e.g. maxTopDifference = 100 means top 0% for current slide and 100% for furthest back slide
+    const topPerIndex = maxTopDifference / (this.zIndexCurrentSlide - 1);
+    // console.log('this.zIndexCurrentSlide: ', this.zIndexCurrentSlide);
+    // console.log('topPerIndex: ', topPerIndex);
+    return maxTopDifference - (this.zIndexCurrentSlide - this.getZIndexFromIndex(index)) * topPerIndex;
+  }
+
+  // 0
+  // -1 +1
+  // 0
+
+  // Pass in the relative index e.g. +1 +2 -1 -2 ...
+  private wrapLeftValue(x, min, max, step): number {
+    const range = max - min;
+    if (x < min) {
+      x = min + (min - x);
+      return this.wrapLeftValue(x, min, max, step);
+    } else if (x > max) {
+      x = max - (x - max);
+      return this.wrapLeftValue(x, min, max, step);
+    } else if (x < (min - range)) {
+      x = x + range;
+    } else if (x > (max + range)) {
+      x = x - range;
+    } else {
+      return x;
+    }
+  }
+
+  // Left css property
+  public getXPositionFromIndex(index: number) {
+    const maxLeftDifference = 100; // e.g. maxTopDifference = 100 means top 0% for current slide and 100% for furthest back slide
+    const leftPerIndex = maxLeftDifference / (this.carouselSlides.length);
+    // console.log('/////////////////////////')
+    // console.log('this.zIndexCurrentSlide: ', this.zIndexCurrentSlide);
+    // console.log('this.currentSlideIndex: ', this.currentSlideIndex);
+    // console.log('index: ', index);
+    // console.log('leftPerIndex: ', leftPerIndex);
+    const indexDifference = this.currentSlideIndex - index;
+    // console.log('indexDifference: ', indexDifference);
+    // const wrappedIndexDifference = this.wrapIndex(indexDifference, -1, 1);
+    // console.log('wrappedIndexDifference: ', wrappedIndexDifference);
+    // const wrappedIndexDifference = 
+    const leftUnwrappedValue = 50 + (indexDifference) * leftPerIndex*2;
+    // console.log('leftUnwrappedValue: ', leftUnwrappedValue);
+    const wrappedLeftValue = this.wrapLeftValue(leftUnwrappedValue, 0, 100, 2*leftPerIndex);
+    // console.log('wrappedLeftValue: ', wrappedLeftValue);
+
+    // let leftValue = 0;
+    // if (leftUnwrappedValue > 100) {
+    //   leftValue = 100 - (leftUnwrappedValue - 100);
+    // } else if (leftUnwrappedValue < 0) {
+    //   leftValue = 0 + (0 - leftUnwrappedValue);
+    // } else {
+    //   leftValue = leftUnwrappedValue;
+    // }
+    // console.log('leftValue: ', leftValue);
+    return wrappedLeftValue;
+  }
+
+  carouselSlides: ICarouselSlide[] = [
+    {
+      title: '',
+      filename: 'home.png',
+      type: 'image-pair',
+      src: ''
+    },
+    {
+      title: '',
+      filename: 'countryRiskHome.png',
+      type: 'image-pair',
+      src: ''
+    },
+    {
+      title: '',
+      filename: 'countryRiskAnalyse.png',
+      type: 'image-pair',
+      src: ''
+    },
+    {
+      title: '',
+      filename: 'countryRiskAnalyseSidePanel.png',
+      type: 'image-pair',
+      src: ''
+    },
+    {
+      title: '',
+      filename: '',
+      src: 'https://media.giphy.com/media/Q5uZN90CfuiF9RSKcd/giphy.gif',
+      type: 'image'
+    },
+    {
+      title: '',
+      filename: '',
+      src: 'assets/images/poster.jpg',
+      type: 'image'
+    }
+  ];
+
+  currentSlideIndex: number = 0;
+
+  public get currentSlide(): ICarouselSlide {
+    return this.carouselSlides[this.currentSlideIndex];
+  }
+
   skills: ISkill[] = [
     {
       name: 'Git',
-      value: 3.5
+      value: 4
     },
     {
       name: 'JavaScript',
-      value: 3.25
+      value: 4
     },
     {
       name: 'HTML',
-      value: 3
+      value: 3.5
     },
     {
       name: 'SCSS',
-      value: 3
+      value: 3.5
     },
     {
       name: 'NPM',
-      value: 3
+      value: 3.5
     },
     {
       name: 'Agile',
-      value: 2.75
+      value: 3.25
     },
     {
       name: 'TypeScript',
-      value: 2.5
+      value: 3
     },
     {
       name: 'Angular 12',
-      value: 2.5
+      value: 3
+    },
+    {
+      name: 'Jasmine/Karma',
+      value: 2
     },
     {
       name: 'Azure DevOps',
@@ -78,7 +269,11 @@ export class CVComponent implements OnInit, OnDestroy {
       value: 1.5
     },
     {
-      name: 'Jasmine/Karma',
+      name: 'Open Source',
+      value: 1.5
+    },
+    {
+      name: 'JUnit',
       value: 1.25
     },
     {
@@ -86,16 +281,84 @@ export class CVComponent implements OnInit, OnDestroy {
       value: 1
     },
     {
+      name: 'BrowserStack',
+      value: 0.75
+    },
+    {
+      name: 'AG Grid',
+      value: 0.75
+    },
+    {
+      name: 'JSPDF',
+      value: 0.75
+    },
+    {
+      name: 'Jest',
+      value: 0.75
+    },
+    {
+      name: 'NX Monorepo',
+      value: 0.75
+    },
+    {
+      name: 'Bitbucket',
+      value: 0.75
+    },
+    {
+      name: 'NGRX',
+      value: 0.75
+    },
+    {
       name: 'Docker',
       value: 0.5
     },
-    {
-      name: 'JUnit',
-      value: 0.5
-    },
+    // {
+    //   name: 'C++',
+    //   value: 0.25
+    // },
+    // {
+    //   name: 'React Native',
+    //   value: 0.75
+    // },
+    // {
+    //   name: 'Redux',
+    //   value: 0.75
+    // },
+    // {
+    //   name: 'VirtualBox',
+    //   value: 0.25
+    // },
+    // {
+    //   name: 'Conductor',
+    //   value: 0.25
+    // },
+    // {
+    //   name: 'HTTP',
+    //   value: 1.75
+    // },
   ]
 
   workExperiences: IWorkExperience[] = [
+    {
+      jobTitle: 'Angular Developer',
+      agency: 'Ronald James Group',
+      client: 'Verisk Maplecroft',
+      startDate: '08/2022',
+      endDate: '03/2023',
+      location: 'Remote',
+      description: [
+        'Angular 12, TypeScript, HTML, SCSS, NPM, Git, Agile Sprints, Jira, Bitbucket, RXJS, NX Monorepo, Jasmine, Jest, JSPDF, AG Grid, BrowserStack',
+        'Implemented rebranding of website, updating layout, colors, icons and logos',
+        'Modified behaviour and styles of AG Grid Tables using custom components and icons',
+        'Updated printed document styles and content using JSPDF',
+        'Investigated and helped migrate to Google Analytics 4',
+        'Fixed bugs on various browsers using Browserstack',
+        'Refactored and moved code and styles to NX Repo library from individual apps to create reusable components',
+        'Created reusable styles using SASS Placeholders and modular SASS imports with SASS Use',
+        'Implemented a reusable icon component with dynamic colours using CSS variables'
+      ]
+    },
+    // Accesibility, tab navigation
     {
       jobTitle: 'Angular Developer',
       agency: 'The Just Brand',
@@ -332,11 +595,46 @@ export class CVComponent implements OnInit, OnDestroy {
 //   Array(Math.ceil((stop - start) / step)).fill(start).map((x, y) => x + y * step)
     this.animateBarOnShow()  
     window.addEventListener("scroll", this.animateBarOnShow);
+    // this.http.get('/');
+
   }
 
   ngOnDestroy(): void {
     window.removeEventListener("scroll", this.animateBarOnShow);
   }
+
+  ngAfterViewInit(): void {
+    this.updateCarouselPositions();
+  }
+  
+  updateCarouselPositions() {
+    let carouselSlideElements: NodeListOf<HTMLElement> = document.querySelectorAll(".image-container");
+    console.log('carouselSlideElements: ', carouselSlideElements);
+
+    carouselSlideElements.forEach((element, index) => {
+      let relativeIndex = index - this.currentSlideIndex;
+      // console.log('////////////////////')
+      // console.log('index: ', index);
+      // console.log('relativeIndex: ', relativeIndex);
+      // console.log('this.getZIndexFromIndex(index): ', this.getZIndexFromIndex(index));
+      // console.log('////////////////////')
+
+      if (relativeIndex === 0) {
+        element.style.setProperty('--scale', (1 + this.getYPositionFromIndex(index)/200).toString());
+      } else {
+        element.style.setProperty('--scale', (1/1.4 + this.getYPositionFromIndex(index)/200).toString());
+      }
+
+      element.style.setProperty('--left', this.getXPositionFromIndex(index) + '%');
+      element.style.setProperty('--top', this.getYPositionFromIndex(index) + '%');
+      element.style.setProperty('--z-index', this.getZIndexFromIndex(index).toString());
+    })
+  }
+
+  // Odd Number of slides
+  // 1 2 3 4 5 6 7
+  // relativeIndex -3-2-1 0 1 2 3  
+  // z-index 1 2 3 4 3 2 1
 
   animateBarOnShow() {
     var reveals: NodeListOf<HTMLElement> = document.querySelectorAll(".bar");
@@ -351,13 +649,58 @@ export class CVComponent implements OnInit, OnDestroy {
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 1;
+      var elementVisible = 0;
       if (elementTop < windowHeight - elementVisible) {
-        reveals[i].style.setProperty('animation', 'bar' + i +' 1.2s 0.1s forwards')
+        let classNames: string[] = reveals[i].className.split(' ');
+        // console.log('classNames: ', classNames)
+        let animationName = classNames[1];
+        // console.log('animationName: ', animationName);
+        // reveals[i].style.setProperty('display', 'block');
+        // reveals[i]
+        reveals[i].style.setProperty('animation', animationName +' 1.2s 0.1s forwards')
         reveals[i].style.setProperty('background-color', colors[0 + (i - 0) % (colors.length - 0)])
       } else {
         reveals[i].style.removeProperty('animation')
+        // reveals[i].style.setProperty('display', 'none');
       }
     }
+  }
+
+  public get getPreviousCarouselImage() {
+    let previousIndex = this.currentSlideIndex;
+    if (this.currentSlideIndex - 1 < 0) {
+      previousIndex = this.carouselSlides.length - 1;
+    } else {
+      previousIndex = this.currentSlideIndex - 1;
+    }
+    return this.carouselSlides[previousIndex];
+  }
+
+  public get getNextCarouselImage() {
+    let nextIndex = this.currentSlideIndex;
+    if (this.currentSlideIndex + 1 > this.carouselSlides.length - 1) {
+      nextIndex = 0;
+    } else {
+      nextIndex = this.currentSlideIndex + 1;
+    }
+    return this.carouselSlides[nextIndex];
+  }
+
+  nextCarouselImage() {
+    if (this.currentSlideIndex - 1 < 0) {
+      this.currentSlideIndex = this.carouselSlides.length - 1;
+    } else {
+      this.currentSlideIndex -= 1;
+    }
+    this.updateCarouselPositions();
+  }
+
+  previousCarouselImage() {
+    if (this.currentSlideIndex + 1 > this.carouselSlides.length - 1) {
+      this.currentSlideIndex = 0;
+    } else {
+      this.currentSlideIndex += 1;
+    }
+    this.updateCarouselPositions();
   }
 }
