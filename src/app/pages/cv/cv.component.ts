@@ -15,6 +15,10 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   constructor() { }
 
+  deployedAppURLs = [
+    'http://django-blog-env.eba-q3a5e3nb.eu-west-2.elasticbeanstalk.com/'
+  ]
+
   // skills = {
   //   "Git": 3.5,
   //   "JavaScript": 3.25,
