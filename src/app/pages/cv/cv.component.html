@@ -1,12 +1,54 @@
 <div class="cv">
+    <div class="block1 summary-block">
+        <div class="inner-block summary-inner-block">
+            <div class="summary__container">
+                <div appReveal class="summary">
+                    <div class="summary__text">
+                        <div class="summary__name">
+                            {{ profileHeader }}
+                        </div>
+                        <p class="summary__profession">
+                            {{ profileBodyHeader }}
+                        </p>
+                    </div>
+
+                    <!-- <h1 appReveal class="title"><i class="title-icon fa-solid fa-flask"></i>Summary.</h1>
+
+                    <p class="summary__body">
+                        {{ profileBody }}
+                    </p>
+        
+                    <ul class="summary__description">
+                        <li class="summary__description-item">Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
+                        <li class="summary__description-item">Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
+                        <li class="summary__description-item">Implemented website rebranding and created reusable styles using SASS Placeholders.</li>
+                        <li class="summary__description-item">Building responsive, mobile first, and printable designs using JSPDF and BEM methodology.</li>
+                        <li class="summary__description-item">Creating reactive forms and handling user inputs with Angular Material.</li>
+                        <li class="summary__description-item">Writing unit tests in Jasmine and Jest and setting up a reusable Testbed with mocks.</li>
+                        <li class="summary__description-item">Handling large amounts of data in AG Grid tables using custom components.</li>
+                    </ul> -->
+                </div>
+            </div> 
+
+
+            <!-- <h1 appReveal class="title title-alt">Summary.</h1> -->
+
+            <!-- <app-card class="reveal summary"> -->
+            <!-- </app-card> -->
+            <!-- <h1 appReveal class="title title-alt">.....</h1> -->
+        </div>
+    </div>
+
+
     <div class="block1">
         <div class="inner-block">
-            <h1 appReveal class="title title-alt">Summary.</h1>
-            <div appReveal class="summary">
-                <h2 class="summary__title">Front-End Software Developer with 5 years of experience working on UIs mainly using Angular and TypeScript. Experienced with:</h2>
-            </div>
+            <h1 appReveal class="title">Summary.</h1>
 
-            <ul appReveal class="summary__description">
+            <p class="summary__body">
+                {{ profileBody }}
+            </p>
+
+            <ul class="summary__description">
                 <li class="summary__description-item">Reducing app load times using Lazy Loading, Preloading, Caching APIs and Pipes.</li>
                 <li class="summary__description-item">Handling APIs and asynchronous events using RXJS, HTTP Interceptors and Services.</li>
                 <li class="summary__description-item">Implemented website rebranding and created reusable styles using SASS Placeholders.</li>
@@ -15,9 +57,7 @@
                 <li class="summary__description-item">Writing unit tests in Jasmine and Jest and setting up a reusable Testbed with mocks.</li>
                 <li class="summary__description-item">Handling large amounts of data in AG Grid tables using custom components.</li>
             </ul>
-            <!-- <app-card class="reveal summary"> -->
-            <!-- </app-card> -->
-            <h1 appReveal class="title title-alt">.....</h1>
+            <h1 appReveal class="title">.....</h1>
         </div>
     </div>
 
@@ -40,78 +80,6 @@
         <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
         <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
     </c-carousel> -->
-
-    <div class="block5">
-        <div class="inner-block">
-            <h1 appReveal class="title"><i class="title-icon fa-solid fa-camera"></i>Portfolio.</h1>
-            <!-- <div class="first-image-pair">
-                <img
-                    class="carousel-image"
-                    src="{{'assets/workVeriskBeforeRebranding/' + getPreviousCarouselImage.filename }}"
-                />
-                <img
-                    class="carousel-image"
-                    src="{{'assets/workVeriskAfterRebranding/' + getPreviousCarouselImage.filename }}"
-                />
-            </div>
-            <div class="third-image-pair">
-                <img
-                    class="carousel-image"
-                    src="{{'assets/workVeriskBeforeRebranding/' + getNextCarouselImage.filename }}"
-                />
-                <img
-                    class="carousel-image"
-                    src="{{'assets/workVeriskAfterRebranding/' + getNextCarouselImage.filename }}"
-                />
-            </div> -->
-            <div class="carousel-image-container">
-                <ng-container *ngFor="let slide of carouselSlides">
-
-                <div class="image-container" *ngIf="slide.type === 'image-pair'">
-                    <div class="image-pair-image">
-                        <img
-                            class="image"
-                            src="{{'assets/workVeriskBeforeRebranding/' + slide.filename }}"
-                        />
-                        <div class="image-pair-image-footer">Before</div>
-                    </div>
-
-                    <div class="image-pair-image">
-                        <img
-                            class="image"
-                            src="{{'assets/workVeriskAfterRebranding/' + slide.filename }}"
-                        />
-                        <div class="image-pair-image-footer">After</div>
-                    </div>
-                </div>
-                <div class="image-container" *ngIf="slide.type === 'image'">
-                    <img class="image" [src]="slide.src" />
-                </div>
-                
-                <!-- <div class="image-pair">
-                    <img
-                        class="carousel-image"
-                        src="{{'assets/workVeriskBeforeRebranding/' + currentSlide.filename }}"
-                    />
-                    <img
-                        class="carousel-image"
-                        src="{{'assets/workVeriskAfterRebranding/' + currentSlide.filename }}"
-                    />
-                </div> -->
-                </ng-container>
-                <div class="previous-carousel-button" (click)="previousCarouselImage()">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="next-carousel-button" (click)="nextCarouselImage()">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <!-- <button class="" ></button> -->
-                <!-- <button class="next-carousel-button" (click)="nextCarouselImage()"></button> -->
-            </div>
-            <div class="overlay"></div>
-            <h1 appReveal class="title">.....</h1>
-        </div>
-    </div>
 
     <div class="block2">
         <div class="inner-block">

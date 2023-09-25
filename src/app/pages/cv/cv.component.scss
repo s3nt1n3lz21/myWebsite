@@ -2,41 +2,95 @@
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import '../../../styles.scss';
 
-.cv {
-    // margin-top: 100px;
+.summary__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+
+    // height: var(--content-height);
+    max-height: 500px;
+}
+
+.summary-block {
+    min-height: 300px;
+    padding-bottom: 0px;
+}
+
+.summary-inner-block {
+    min-height: 300px;
 }
 
 .summary {
-    background-color: $color1;
-    border-radius: 400px;
-    padding: 50px 200px;
+    height: 500px;
+    color: white;
     display: flex;
-    flex-direction: row;
+    flex: 1;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1500px;
 
-    &__title {
+    &__text {
+      border-radius: 4px;
+      letter-spacing: 1.0em;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 1500px;
+      height: 300px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__name {
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 0px 50px;
+        font-family: $font-family-1;
+        font-size: $font-size-4;
+        font-weight: 600;
+        border-bottom: 1px solid white;
+        width: 80%;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    &__profession {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: $font-family-2;
-        font-weight: bold;
-        font-size: $font-size-3;
-        line-height: 4rem;
+        font-size: $font-size-2;
+        width: 80%;
+        line-height: 150%;
     }
 
-    &__description {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 100px;
-        row-gap: 50px;
-        padding-top: 150px;
+    &__body {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-family-2;
+        font-size: $font-size-2;
+        font-weight: 400;
+        width: 100%;
+        line-height: 150%;
+        padding-bottom: 64px;
     }
 
-    &__description-item {
-        color: $color1;
+    mat-grid-tile {
+      background: lightblue;
     }
+}
+
+.cv {
+    // margin-top: 100px;
 }
 
 .carousel-image-container {

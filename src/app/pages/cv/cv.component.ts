@@ -13,6 +13,10 @@ import { ICarouselSlide } from 'src/app/model/ICarouselSlide';
 })
 export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
+  profileHeader = 'NEIL SMITH'
+  profileBodyHeader = 'SOFTWARE DEVELOPER'
+  profileBody = 'Software Developer with 5 years of experience, working mainly on UIs using Angular and TypeScript. '
+
   constructor() { }
 
   deployedAppURLs = [

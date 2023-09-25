@@ -4,11 +4,11 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), 
-    data: { animation: 'home' }
-  },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), 
+  //   data: { animation: 'home' }
+  // },
   {
     path: 'portfolio',
     loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule), 
@@ -35,7 +35,7 @@ export const routes: Routes = [
     data: { animation: 'certificates' } 
   },
   {
-    path: 'cv',
+    path: 'home',
     loadChildren: () => import('./pages/cv/cv.module').then(m => m.CVModule),
     data: { animation: 'cv' } 
   },
