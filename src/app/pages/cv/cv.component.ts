@@ -467,6 +467,11 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   certificates: ICertificate[] = [
     {
+      name: 'Build a Backend REST API with Python & Django - Advanced',
+      src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-c921223f-746a-44ca-ba9d-49009cf22fb1.jpg?v=1696430336000',
+      link: 'https://www.udemy.com/certificate/UC-c921223f-746a-44ca-ba9d-49009cf22fb1/'
+    },
+    {
       name: 'Python Django - The Practical Guide',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0aea23ba-c88e-4477-88fc-9e5e0e235e05.jpg?v=1695141237000',
       link: 'https://www.udemy.com/certificate/UC-0aea23ba-c88e-4477-88fc-9e5e0e235e05/'
