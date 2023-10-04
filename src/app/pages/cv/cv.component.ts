@@ -469,28 +469,75 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
     {
       name: 'Python Django - The Practical Guide',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0aea23ba-c88e-4477-88fc-9e5e0e235e05.jpg?v=1695141237000',
-      link: 'https://www.udemy.com/certificate/UC-0aea23ba-c88e-4477-88fc-9e5e0e235e05/'
+      link: 'https://www.udemy.com/certificate/UC-0aea23ba-c88e-4477-88fc-9e5e0e235e05/',
+      date: '19/09/2023',
+      completionPercentage: 100,
+      hoursLength: 23
     },
     {
-      name: 'Angular',
+      name: 'Angular - The Complete Guide (2022 Edition)',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086.jpg',
-      link: 'https://www.udemy.com/certificate/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086/'
+      link: 'https://www.udemy.com/certificate/UC-ee3b01bd-a9be-4fa8-b108-4eca59409086/',
+      date: '01/07/2022',
+      completionPercentage: 91,
+      hoursLength: 35
     },
     {
-      name: 'The Numpy Stack',
+      name: 'Deep Learning Prerequisites: The Numpy Stack in Python (V2+)',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-294909d7-6411-4dcb-8787-7ba390f172d5.jpg',
-      link: 'https://www.udemy.com/certificate/UC-294909d7-6411-4dcb-8787-7ba390f172d5/'
+      link: 'https://www.udemy.com/certificate/UC-294909d7-6411-4dcb-8787-7ba390f172d5/',
+      date: '23/07/2022',
+      completionPercentage: 98,
+      hoursLength: 6
     },
     {
-      name: 'Python',
+      name: '100 Days Of Code: The Complete Python Pro Bootcamp for 2022',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-98c9b09c-e16c-4723-b68a-92241fc99642.jpg',
-      link: 'https://www.udemy.com/certificate/UC-98c9b09c-e16c-4723-b68a-92241fc99642/'
+      link: 'https://www.udemy.com/certificate/UC-98c9b09c-e16c-4723-b68a-92241fc99642/',
+      date: '21/07/2022',
+      completionPercentage: 94,
+      hoursLength: 64
     },
     {
-      name: 'RXJS',
+      name: 'RXJS 7 and Observables: Introduction',
       src: 'https://udemy-certificate.s3.amazonaws.com/image/UC-48f5a81f-7c33-4c19-81ed-7535af566712.jpg',
-      link: "https://www.udemy.com/certificate/UC-48f5a81f-7c33-4c19-81ed-7535af566712/"
-    }
+      link: "https://www.udemy.com/certificate/UC-48f5a81f-7c33-4c19-81ed-7535af566712/",
+      date: '08/06/2022',
+      completionPercentage: 100,
+      hoursLength: 5.5
+    },
+    {
+      name: 'Docker & Kubernetes: The Practical Guide [2023 Edition]',
+      src: '',
+      link: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/",
+      date: '',
+      completionPercentage: 35,
+      hoursLength: 23.5
+    },
+    {
+      name: 'NodeJS - The Complete Guide',
+      src: '',
+      link: "https://www.udemy.com/course/nodejs-the-complete-guide/",
+      date: '',
+      completionPercentage: 15,
+      hoursLength: 40.5
+    },
+    {
+      name: 'Deep Learning A-Z 2023: Neural Networks, AI & ChatGPT Bonus',
+      src: '',
+      link: "https://www.udemy.com/course/deeplearning/",
+      date: '',
+      completionPercentage: 67,
+      hoursLength: 22
+    },
+    {
+      name: 'Machine Learning A-Z: AI, Python & R + ChatGPT Bonus',
+      src: '',
+      link: "https://www.udemy.com/course/deeplearning/",
+      date: '',
+      completionPercentage: 23,
+      hoursLength: 42.5
+    },
   ]
 
   awards: IAward[] = [
@@ -523,7 +570,7 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
       date: '2015',
       money: '£50',
       description: 'The best performance by a physics student in their first year.'
-    }
+    },
   ]
 
   ngOnInit(): void {

@@ -1,3 +1,8 @@
-<a target="_blank" href="{{certificate.link}}">
-    <img class="certificate" src="{{certificate.src}}">
-</a>
+<div>
+    <a target="_blank" href="{{certificate.link}}">
+        <img class="certificate" src="{{certificate.src}}">
+    </a>
+    <p class="certificate__completion">Percentage Complete</p>
+    <p class="certificate__completion">{{ certificate.completionPercentage }}%</p>
+</div>
+

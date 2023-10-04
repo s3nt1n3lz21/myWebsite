@@ -14,5 +14,10 @@
     @extend .shadow;
     @extend .scale-hover;
 
+    &__completion {
+        padding-top: 16px;
+        font-size: $font-size-2;
+        text-align: center;
+    }
 }
 
