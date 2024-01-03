@@ -4,7 +4,7 @@
 
 }
 
-$bar-max-width: 80%;
+$bar-max-width: 70%;
 
 .row {
     display: flex;
@@ -209,6 +209,33 @@ $bar-max-width: 80%;
     }
     100% {
         width: calc(4/4 * #{$bar-max-width});
+    }
+}
+
+@keyframes bar17 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(4.25/4 * #{$bar-max-width});
+    }
+}
+
+@keyframes bar18 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(4.5/4 * #{$bar-max-width});
+    }
+}
+
+@keyframes bar19 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(4.75/4 * #{$bar-max-width});
     }
 }
 

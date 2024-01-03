@@ -15,7 +15,7 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   profileHeader = 'NEIL SMITH'
   profileBodyHeader = 'SOFTWARE DEVELOPER'
-  profileBody = 'Software Developer with 5 years of experience, working mainly on UIs using Angular and TypeScript. '
+  profileBody = 'Software Developer with 5 years of experience, working mainly on UIs using Angular and TypeScript and Python.'
 
   constructor() { }
 
@@ -230,91 +230,75 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
   skills: ISkill[] = [
     {
       name: 'Git',
-      value: 4
+      value: 4.75
     },
     {
       name: 'JavaScript',
-      value: 4
+      value: 4.75
     },
     {
       name: 'HTML',
-      value: 3.5
+      value: 4.25
     },
     {
       name: 'SCSS',
-      value: 3.5
+      value: 4.25
     },
     {
       name: 'NPM',
-      value: 3.5
+      value: 4.25
     },
     {
       name: 'Agile',
-      value: 3.25
+      value: 4
     },
     {
       name: 'TypeScript',
-      value: 3
+      value: 3.75
     },
     {
-      name: 'Angular 12',
-      value: 3
+      name: 'Angular 17',
+      value: 3.75
     },
     {
       name: 'Jasmine/Karma',
-      value: 2
+      value: 2.75
+    },
+    {
+      name: 'Python',
+      value: 1.5
+    },
+    {
+      name: 'NGRX',
+      value: 1.5
     },
     {
       name: 'Azure DevOps',
       value: 1.5
     },
     {
-      name: 'Java 8',
-      value: 1.5
-    },
-    {
-      name: 'Maven',
-      value: 1.5
-    },
-    {
-      name: 'Open Source',
-      value: 1.5
-    },
-    {
-      name: 'JUnit',
-      value: 1.25
-    },
-    {
-      name: 'Python',
-      value: 1
-    },
-    {
-      name: 'BrowserStack',
-      value: 0.75
-    },
-    {
-      name: 'AG Grid',
-      value: 0.75
-    },
-    {
-      name: 'JSPDF',
-      value: 0.75
-    },
-    {
       name: 'Jest',
-      value: 0.75
+      value: 1.5
     },
     {
       name: 'NX Monorepo',
-      value: 0.75
+      value: 1.5
     },
     {
       name: 'Bitbucket',
-      value: 0.75
+      value: 1.5
     },
     {
-      name: 'NGRX',
-      value: 0.75
+      name: 'Django',
+      value: 0.5
+    },
+    {
+      name: 'REST APIs',
+      value: 0.5
+    },
+    {
+      name: 'Flask',
+      value: 0.5
     },
     {
       name: 'Docker',
