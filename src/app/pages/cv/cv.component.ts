@@ -15,7 +15,7 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   profileHeader = 'NEIL SMITH'
   profileBodyHeader = 'SOFTWARE DEVELOPER'
-  profileBody = 'Software Developer with 5 years of experience, working mainly on UIs using Angular and TypeScript and Python.'
+  profileBody = 'Software developer with over 6 years of experience in web app technologies including Angular and React, complemented with Java, Python, AWS and React Native development.'
 
   constructor() { }
 
