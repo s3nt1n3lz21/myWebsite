@@ -7,16 +7,16 @@ import { ISkill } from 'src/app/model/ISkill';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+  ngOnInit(): void {}
 
   public skills: ISkill[] = []
   @Input() set skillsInput(skills: ISkill[]) {
     this.skills = skills;
   }
 
-  constructor() { }
+  private overlapThresholdYears = 4; 
 
-  ngOnInit(): void {
+  isOverlap(value: number): boolean {
+    return value < this.overlapThresholdYears;
   }
-
-
 }

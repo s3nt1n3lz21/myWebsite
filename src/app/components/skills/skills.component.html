@@ -1,11 +1,13 @@
 <div class="bar-graph">
   <div class="row" *ngFor="let skill of skills; index as i">
     <div class="name">{{ skill.name }}</div>
-    <div class="bar-container">
+    <div class="bar-container" 
+         [style.--skill-value]="skill.value" 
+         [attr.data-overlap]="isOverlap(skill.value) ? 'true' : null">
         <div class="bar bar{{skill.value*4}}">
-        </div>
-        <div class="bar-label">
-          {{skill.value}} Years
+          <div class="bar-label">
+            {{skill.value}} Years
+          </div>
         </div>
     </div>
   </div>
