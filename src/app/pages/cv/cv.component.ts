@@ -229,80 +229,84 @@ export class CVComponent implements OnInit, OnDestroy, AfterViewInit {
 
   skills: ISkill[] = [
     {
-      name: 'Git',
-      value: 4.75
+      name: 'Git/Bitbucket',
+      value: 5.5
     },
     {
       name: 'JavaScript',
-      value: 4.75
+      value: 5.25
     },
     {
       name: 'HTML',
-      value: 4.25
+      value: 5
     },
     {
-      name: 'SCSS',
-      value: 4.25
+      name: 'CSS/SCSS',
+      value: 5
     },
     {
-      name: 'NPM',
-      value: 4.25
+      name: 'NPM/Maven/Gradle',
+      value: 5
     },
     {
-      name: 'Agile',
-      value: 4
+      name: 'Agile/Scrum/Kanban',
+      value: 4.75
     },
     {
       name: 'TypeScript',
-      value: 3.75
+      value: 4.5
     },
     {
-      name: 'Angular 17',
-      value: 3.75
+      name: 'Angular 18',
+      value: 4.5
     },
     {
-      name: 'Jasmine/Karma',
-      value: 2.75
+      name: 'Jasmine/Karma/Jest',
+      value: 3.25
     },
     {
       name: 'Python',
-      value: 1.5
+      value: 2
     },
     {
       name: 'NGRX',
-      value: 1.5
+      value: 2
     },
     {
-      name: 'Azure DevOps',
-      value: 1.5
-    },
-    {
-      name: 'Jest',
-      value: 1.5
+      name: 'CICD/Github Actions',
+      value: 2
     },
     {
       name: 'NX Monorepo',
-      value: 1.5
+      value: 2
     },
     {
-      name: 'Bitbucket',
-      value: 1.5
+      name: 'Java/Kotlin',
+      value: 1.75
     },
     {
-      name: 'Django',
-      value: 0.5
+      name: 'Mobile/React Native',
+      value: 1
+    },
+    {
+      name: 'Django/Flask',
+      value: 1
     },
     {
       name: 'REST APIs',
       value: 0.5
     },
     {
-      name: 'Flask',
+      name: 'Docker',
       value: 0.5
     },
     {
-      name: 'Docker',
+      name: 'AWS',
       value: 0.5
+    },
+    {
+      name: 'Data Science',
+      value: 0.25
     },
     // {
     //   name: 'C++',
