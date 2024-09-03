@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
+## Node.js Version
+
+This project requires Node.js version 16.20.2. If you use `nvm` (Node Version Manager), you can switch to the correct version by running the following command in your terminal:
+
+```bash
+nvm use 16.20.2
+```
+
+If you don't have this version installed, you can install it using:
+
+```bash
+nvm install 16.20.2
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
