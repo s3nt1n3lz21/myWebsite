@@ -37,7 +37,12 @@
     flex-shrink: 0;
     height: 103px;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header stays above other content */
+    background-color: inherit; /* Ensures the header background matches your theme */
   }
+  
 
   .content {
     --content-height: calc(100vh - 206px);
